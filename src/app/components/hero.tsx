@@ -1,4 +1,12 @@
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Phone,
+  Sparkle,
+  Sparkles,
+  WandSparkles,
+  Zap,
+} from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
@@ -7,7 +15,7 @@ const Hero = () => {
       <div className="flex flex-col xl:gap-20 gap-16">
         <div className="flex flex-col xl:gap-14 md:gap-11 gap-10">
           <div className="flex flex-col md:gap-9 gap-8">
-            <div className="max-w-3xl mx-auto md:gap-6 gap-5">
+            <div className="max-w-3xl mx-auto md:gap-6 gap-5 flex flex-col">
               <div className="bg-white border border-[#e5eaf0] rounded-full pl-3 py-1 pr-1 flex items-center">
                 <div className="size-1.5 bg-green-500 shadow-[0_0_0_2px_rgb(34_197_94/0.25)] rounded-full animate-pulse-strong" />
                 <p className="text-[#0f1115] text-xs py-1 pl-2.5 pr-3">
@@ -23,10 +31,32 @@ const Hero = () => {
                   </button>
                 </div>
               </div>
-              <div>2</div>
-              <div>3</div>
+              <h1 className="text-[#0f1115] font-bold text-5xl tracking-tighter leading-[72px] text-center">
+                Where Trade Meets <br /> Opportunity{" "}
+                <div className="inline-flex -space-x-3 mr-1">
+                  <div className="bg-[#e0f5ff] size-11 flex items-center justify-center rounded-xl rotate-[9deg]">
+                    <Sparkles size={20} color="#01aaff" fill="#01aaff" />
+                  </div>
+                  <div className="bg-[#ffefee] size-11 flex items-center justify-center rounded-xl rotate-[-8deg] shadow-[0_0_0_3px_rgb(255_255_255/1)]">
+                    <Zap size={20} color="#ff5247" fill="#ff5247" />
+                  </div>
+                </div>{" "}
+              </h1>
+              <p className="max-w-[500px] mx-auto text-[#323745] text-center">
+                Expand Your Business in Europe — Confidently. Lead your business
+                to global connections.
+              </p>
             </div>
-            <div>2</div>
+            <div className="mx-auto">
+              <button className="p-2.5 bg-[#151619] rounded-full flex items-center">
+                <div className="size-7 bg-white/13 flex items-center justify-center rounded-full">
+                  <Phone size={14} />
+                </div>
+                <div className="py-1 px-3">
+                  <p className="text-white text-sm">Book a call</p>
+                </div>
+              </button>
+            </div>
           </div>
           <div>a</div>
         </div>
