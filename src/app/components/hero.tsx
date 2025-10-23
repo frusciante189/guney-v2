@@ -3,6 +3,7 @@ import {
   Phone,
   Sparkle,
   Sparkles,
+  Star,
   WandSparkles,
   Zap,
 } from "lucide-react";
@@ -15,8 +16,8 @@ const Hero = () => {
       <div className="flex flex-col xl:gap-20 gap-16">
         <div className="flex flex-col xl:gap-14 md:gap-11 gap-10">
           <div className="flex flex-col md:gap-9 gap-8">
-            <div className="max-w-3xl mx-auto md:gap-6 gap-5 flex flex-col">
-              <div className="bg-white border border-[#e5eaf0] rounded-full pl-3 py-1 pr-1 flex items-center">
+            <div className="max-w-3xl mx-auto md:gap-6 gap-5 flex flex-col items-center">
+              <div className="bg-white border border-[#e5eaf0] rounded-full pl-3 py-1 pr-1 flex items-center max-w-max">
                 <div className="size-1.5 bg-green-500 shadow-[0_0_0_2px_rgb(34_197_94/0.25)] rounded-full animate-pulse-strong" />
                 <p className="text-[#0f1115] text-xs py-1 pl-2.5 pr-3">
                   Slots are available for October
@@ -31,9 +32,10 @@ const Hero = () => {
                   </button>
                 </div>
               </div>
-              <h1 className="text-[#0f1115] font-bold text-5xl tracking-tighter leading-[72px] text-center">
-                Where Trade Meets <br /> Opportunity{" "}
-                <div className="inline-flex -space-x-3 mr-1">
+              <h1 className="text-[#0f1115] font-bold xl:text-5xl md:text-4xl text-3xl tracking-tighter xl:leading-[72px] text-center">
+                Where Trade Meets <br className="md:block hidden" /> Opportunity{" "}
+                <br className="sm:hidden block" />
+                <div className="inline-flex -space-x-3 mr-1 sm:mt-0 mt-1.5">
                   <div className="bg-[#e0f5ff] size-11 flex items-center justify-center rounded-xl rotate-[9deg]">
                     <Sparkles size={20} color="#01aaff" fill="#01aaff" />
                   </div>
@@ -42,7 +44,7 @@ const Hero = () => {
                   </div>
                 </div>{" "}
               </h1>
-              <p className="max-w-[500px] mx-auto text-[#323745] text-center">
+              <p className="max-w-[500px] mx-auto text-[#323745] text-center text-sm">
                 Expand Your Business in Europe — Confidently. Lead your business
                 to global connections.
               </p>
@@ -58,10 +60,49 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          <div>a</div>
+          <div className="flex items-center gap-4 justify-center">
+            <div className="flex items-center -space-x-2">
+              <Image
+                src="/p1.avif"
+                width={36}
+                height={36}
+                className="size-9 rounded-full shadow-[0_0_0_3px_rgb(255_255_255/1)] object-cover"
+                alt="Reviewer 1"
+              />
+              <Image
+                src="/p2.avif"
+                width={36}
+                height={36}
+                className="size-9 rounded-full shadow-[0_0_0_3px_rgb(255_255_255/1)] object-cover"
+                alt="Reviewer 2"
+              />
+              <Image
+                src="/p3.avif"
+                width={36}
+                height={36}
+                className="size-9 rounded-full shadow-[0_0_0_3px_rgb(255_255_255/1)] object-cover"
+                alt="Reviewer 3"
+              />
+              <div className="size-9 flex items-center justify-center font-medium text-[#0f1115] outline outline-[#e5eaf0] shadow-[0_0_0_3px_rgb(255_255_255/1)] rounded-full bg-[#f9fafb] text-xs">
+                +2K
+              </div>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-0.5">
+                <Star size={14} color="#323745" fill="#323745" />
+                <Star size={14} color="#323745" fill="#323745" />
+                <Star size={14} color="#323745" fill="#323745" />
+                <Star size={14} color="#323745" fill="#323745" />
+                <Star size={14} color="#323745" fill="#323745" />
+              </div>
+              <span className="text-[#50576b] text-xs font-medium">
+                From 1.5K reviews
+              </span>
+            </div>
+          </div>
         </div>
-        <div>2</div>
-        <div>3</div>
+        <div>carousel</div>
+        <div>logos</div>
       </div>
     </div>
   );
