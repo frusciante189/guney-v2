@@ -10,6 +10,27 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
 
+  /* Brand Colors */
+  --color-brand-coral: #ff5247;
+  --color-brand-sky: #01aaff;
+
+  /* Background Colors */
+  --color-bg-sky-light: #e0f5ff;
+  --color-bg-coral-light: #ffefee;
+  --color-bg-gray-light: #f3f5f6;
+  --color-bg-gray-lighter: #f9fafb;
+  --color-bg-dark: #151619;
+
+  /* Border Colors */
+  --color-border-gray: #e5eaf0;
+  --color-border-gray-dark: #e2e7ee;
+
+  /* Text Colors */
+  --color-text-primary: #0f1115;
+  --color-text-secondary: #323745;
+  --color-text-tertiary: #50576b;
+  --color-text-muted: #697289;
+
   --animate-pulse-strong: pulse-strong 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes pulse-strong {

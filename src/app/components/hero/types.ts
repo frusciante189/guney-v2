@@ -1,0 +1,41 @@
+export interface HeroBadgeProps {
+  availabilityText?: string;
+  eventText?: string;
+  onEventClick?: () => void;
+}
+
+export interface HeroCTAProps {
+  text?: string;
+  onBookCall?: () => void;
+  isLoading?: boolean;
+}
+
+export interface HeroVideoProps {
+  thumbnailUrl?: string;
+  videoUrl?: string;
+  onPlayClick?: () => void;
+  altText?: string;
+}
+
+export interface ReviewerData {
+  src: string;
+  alt: string;
+}
+
+export interface HeroSocialProofProps {
+  reviewers?: ReviewerData[];
+  totalReviewers?: string;
+  rating?: number;
+  reviewCount?: string;
+}
+
+export interface LogoData {
+  src: string;
+  alt: string;
+}
+
+export interface HeroTrustedCompaniesProps {
+  title?: string;
+  logos?: LogoData[];
+  animationDuration?: number;
+}
