@@ -1,6 +1,9 @@
+"use client";
+
 import {
   ArrowUpRight,
   Phone,
+  Play,
   Sparkle,
   Sparkles,
   Star,
@@ -9,10 +12,20 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { motion } from "motion/react";
 
 const Hero = () => {
+  const logos = [
+    "/logos/l1.svg",
+    "/logos/l2.svg",
+    "/logos/l3.svg",
+    "/logos/l4.svg",
+    "/logos/l5.svg",
+    "/logos/l6.svg",
+  ];
+
   return (
-    <div className="max-w-[1200px] mx-auto md:px-8 px-5 xl:pt-40 xl:pb-20 pt-28 md:pb-14 pb-10">
+    <div className="max-w-[1000px] mx-auto md:px-8 px-5 xl:pt-40 xl:pb-20 pt-28 md:pb-14 pb-10">
       <div className="flex flex-col xl:gap-20 gap-16">
         <div className="flex flex-col xl:gap-14 md:gap-11 gap-10">
           <div className="flex flex-col md:gap-9 gap-8">
@@ -101,8 +114,51 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div>carousel</div>
-        <div>logos</div>
+        <div className="p-3 border border-[#e5eaf0] sm:w-[526px] sm:h-[351px] rounded-4xl mx-auto relative">
+          <Image
+            src="/guney-pp.jpg"
+            width={526}
+            height={352}
+            alt="Guney"
+            className="object-cover rounded-4xl size-full"
+          />
+          <div className="size-12 inline-flex rounded-2xl items-center justify-center bg-[#ff5247] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:scale-110 hover:opacity-90 cursor-pointer">
+            <Play size={20} color="white" fill="white" />
+          </div>
+        </div>
+        <div className="md:gap-6 gap-5 flex flex-col items-center justify-center">
+          <h1 className="uppercase text-[#697289] text-xs font-medium">
+            TRUSTED BY TOP COMPANIES
+          </h1>
+          <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 before:bg-linear-to-r before:from-white before:to-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 after:bg-linear-to-l after:from-white after:to-transparent after:content-['']">
+            <motion.div
+              className="flex gap-8 w-max"
+              animate={{
+                x: ["-50%", "0%"],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
+              {[...Array(2)].map((_, arrayIndex) => (
+                <div key={arrayIndex} className="flex gap-8 items-center">
+                  {logos.map((logo, index) => (
+                    <Image
+                      key={index}
+                      src={logo}
+                      alt={`Company logo ${index + 1}`}
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto object-contain"
+                    />
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );
