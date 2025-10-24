@@ -33,11 +33,13 @@ export default function HeroTrustedCompanies({
       >
         <motion.div
           className="flex gap-8 w-max"
-          animate={isPaused ? {} : { x: ["-50%", "0%"] }}
+          initial={{ x: "-50%" }}
+          animate={!isPaused ? { x: "0%" } : undefined}
           transition={{
             duration: animationDuration,
             repeat: Infinity,
             ease: "linear",
+            repeatType: "loop",
           }}
         >
           {[...Array(2)].map((_, arrayIndex) => (
