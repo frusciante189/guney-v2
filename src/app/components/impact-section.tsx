@@ -39,9 +39,8 @@ export default function ImpactSection() {
               <p className="text-xs text-text-primary font-medium">Impact</p>
             </div>
           </div>
-          <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl text-center text-text-primary max-w-[550px] mx-auto">
-            Bravio simplifies the process,{" "}
-            <br className="xl:block hidden" />
+          <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-text-primary max-w-[550px] mx-auto">
+            Bravio simplifies the process, <br className="xl:block hidden" />
             <span className="text-text-muted">and delivers results.</span>
           </h2>
         </div>
