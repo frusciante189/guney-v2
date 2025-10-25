@@ -58,7 +58,7 @@ const Star = () => {
             fill="#AEA5FF"
           />
         </g>
-        <g style={{ mixBlendMode: "plus-darker" as any }} opacity="0.35">
+        <g style={{ mixBlendMode: "plus-darker" as React.CSSProperties["mixBlendMode"] }} opacity="0.35">
           <rect width="176" height="176" fill="url(#pattern0_295_23052)" />
         </g>
       </g>

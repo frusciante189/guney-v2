@@ -268,7 +268,7 @@ export default function ServiceCards() {
           <div className="flex flex-col gap-2">
             <div className="bg-bg-gray-lighter rounded-2xl rounded-tl-none p-3 max-w-[70%]">
               <p className="text-xs text-text-secondary">
-                Booth space confirmed for next week's fair!
+                Booth space confirmed for next week&apos;s fair!
               </p>
             </div>
             <div className="bg-brand-coral/10 rounded-2xl rounded-tr-none p-3 ml-auto max-w-[70%]">

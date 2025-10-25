@@ -1,5 +1,3 @@
-import { Quote } from "lucide-react";
-
 export default function HeroTestimonialCard() {
   return (
     <div className="relative">
@@ -33,10 +31,21 @@ export default function HeroTestimonialCard() {
         <div className="flex flex-col gap-3">
           <div className="flex gap-2.5">
             <p className="text-xs font-medium" style={{ color: "#50576b" }}>
-              "Bravio nailed our MVP design with a fast turnaround and
-              incredible attention to detail."
+              &quot;Bravio nailed our MVP design with a fast turnaround and
+              incredible attention to detail.&quot;
             </p>
-            <Quote size={20} style={{ color: "#50576b" }} className="shrink-0" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+              fill="var(--token-67b490dc-d3b7-4020-8dab-9b587b280140, rgb(159, 170, 193))"
+              className="size-10"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>{" "}
+              <path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"></path>{" "}
+              <path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"></path>{" "}
+            </svg>
           </div>
           <p className="text-xs font-medium" style={{ color: "#0f1115" }}>
             - Sarah Mitchel
