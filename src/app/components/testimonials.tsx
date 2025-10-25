@@ -25,7 +25,7 @@ export default function Testimonials() {
             Results that speaks volume <br className="xl:block hidden" />
             <span className="text-text-muted">Read success stories</span>
           </h2>
-          <p className="text-text-tertiary">
+          <p className="text-text-tertiary max-w-[350px] mx-auto text-center">
             Find out how our happy clients are raving about us.
           </p>
         </div>
@@ -63,9 +63,9 @@ export default function Testimonials() {
                   </svg>
                   <p className="text-text-tertiary">
                     &quot;We needed a modern, high-converting website, and the
-                    Bravio team delivered beyond expectations. Their design
-                    and SEO expertise helped us increase conversion rate by
-                    800% in just two weeks. Highly recommend!&quot;
+                    Bravio team delivered beyond expectations. Their design and
+                    SEO expertise helped us increase conversion rate by 800% in
+                    just two weeks. Highly recommend!&quot;
                   </p>
                 </div>
               </div>
@@ -126,7 +126,9 @@ export default function Testimonials() {
                     <path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"></path>{" "}
                   </svg>
                   <p className="text-text-tertiary text-sm leading-5">
-                    &quot;From branding to website design, every detail was meticulously handled. The team&apos;s expertise helped us launch faster, and the results have been phenomenal!&quot;
+                    &quot;From branding to website design, every detail was
+                    meticulously handled. The team&apos;s expertise helped us
+                    launch faster, and the results have been phenomenal!&quot;
                   </p>
                 </div>
               </div>
@@ -178,7 +180,9 @@ export default function Testimonials() {
                   <path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"></path>{" "}
                 </svg>
                 <p className="text-text-tertiary text-sm leading-5">
-                  &quot;Their animation work took our product videos to the next level. The team truly understands user experience and storytelling.&quot;
+                  &quot;Their animation work took our product videos to the next
+                  level. The team truly understands user experience and
+                  storytelling.&quot;
                 </p>
               </div>
 
@@ -222,7 +226,9 @@ export default function Testimonials() {
                   <path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"></path>{" "}
                 </svg>
                 <p className="text-text-tertiary text-sm leading-5">
-                  &quot;We needed a modern, high-converting website, and Bravio delivered. Their expertise helped us increase conversion rate by 400% in just a week!&quot;
+                  &quot;We needed a modern, high-converting website, and Bravio
+                  delivered. Their expertise helped us increase conversion rate
+                  by 400% in just a week!&quot;
                 </p>
               </div>
 
@@ -236,7 +242,9 @@ export default function Testimonials() {
                   className="rounded-full size-12 object-cover"
                 />
                 <div className="flex flex-col gap-1">
-                  <p className="text-text-primary font-medium">Danielle Reyes</p>
+                  <p className="text-text-primary font-medium">
+                    Danielle Reyes
+                  </p>
                   <p className="text-text-tertiary text-xs">
                     Founder, Ember & Co
                   </p>
