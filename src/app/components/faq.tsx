@@ -1,7 +1,9 @@
 "use client";
 
 import * as Accordion from "@radix-ui/react-accordion";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowUpRight } from "lucide-react";
+import LShape from "./LShape";
+import LShapeReverse from "./LShapeReverse";
 
 const faqData = [
   {
@@ -50,44 +52,92 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <Accordion.Root
-      type="single"
-      collapsible
-      defaultValue="item-5"
-      className="w-full max-w-[606px] flex flex-col"
-    >
-      {faqData.map((faq) => (
-        <Accordion.Item
-          key={faq.id}
-          value={faq.id}
-          className={`border-b border-border-gray`}
-        >
-          <Accordion.Header>
-            <Accordion.Trigger className="w-full px-5 py-7 flex items-center justify-between gap-4 text-left group transition-all">
-              <span className="text-text-primary font-medium">
-                {faq.question}
-              </span>
-              <div className="shrink-0">
-                <Plus
-                  size={16}
-                  className="text-text-primary transition-all duration-300 group-data-[state=open]:opacity-0 group-data-[state=open]:rotate-90 absolute"
-                />
-                <Minus
-                  size={16}
-                  className="text-text-primary transition-all duration-300 group-data-[state=closed]:opacity-0 group-data-[state=closed]:-rotate-90"
-                />
+    <div className="max-w-[1200px] mx-auto md:px-8 px-5 xl:py-24 md:py-14 py-10 font-jakarta">
+      <div className="xl:gap-16 md:gap-14 gap-20 flex justify-between lg:flex-row flex-col">
+        <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col xl:gap-5 gap-4">
+            <div className="p-1.5 relative max-w-max">
+              <div className="absolute top-0 right-0 rotate-270">
+                <LShapeReverse />
               </div>
-            </Accordion.Trigger>
-          </Accordion.Header>
-          <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
-            <div className="pb-5 pl-5 pr-12">
-              <p className="text-text-tertiary leading-5 text-sm">
-                {faq.answer}
+              <div className="absolute bottom-0 left-0">
+                <LShape />
+              </div>
+              <div className="px-2">
+                <p className="text-xs text-text-primary font-medium">
+                  Testimonials
+                </p>
+              </div>
+            </div>
+            <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-text-primary max-w-[550px]">
+              Have questions,
+              <br className="xl:block hidden" />
+              <span className="text-text-muted">We got answers.</span>
+            </h2>
+            <p className="text-text-tertiary max-w-[350px]">
+              Everything you need to know about our process, and how we deliver
+              results.
+            </p>
+          </div>
+          <div className="bg-bg-gray-lighter rounded-3xl flex flex-col gap-5 p-7">
+            <div className="flex flex-col gap-2">
+              <h6 className="text-text-primary text-xl font-bold">
+                Can't find your answer?
+              </h6>
+              <p className="text-text-tertiary text-sm leading-5 font-medium">
+                Get in touch with our support team, they a re friendly!
               </p>
             </div>
-          </Accordion.Content>
-        </Accordion.Item>
-      ))}
-    </Accordion.Root>
+            <button className="bg-white border border-border-light rounded-full p-1.5 flex items-center gap-2 max-w-max">
+              <span className="px-2 py-1 text-sm font-medium text-text-secondary">
+                Book a Call
+              </span>
+              <div className="size-7 rounded-full bg-bg-gray-light flex items-center justify-center">
+                <ArrowUpRight className="text-text-primary" size={16} />
+              </div>
+            </button>
+          </div>
+        </div>
+        <Accordion.Root
+          type="single"
+          collapsible
+          defaultValue="item-5"
+          className="w-full lg:max-w-[606px] flex flex-col"
+        >
+          {faqData.map((faq) => (
+            <Accordion.Item
+              key={faq.id}
+              value={faq.id}
+              className={`border-b border-border-gray`}
+            >
+              <Accordion.Header>
+                <Accordion.Trigger className="w-full px-5 py-7 flex items-center justify-between gap-4 text-left group transition-all">
+                  <span className="text-text-primary font-medium">
+                    {faq.question}
+                  </span>
+                  <div className="shrink-0">
+                    <Plus
+                      size={16}
+                      className="text-text-primary transition-all duration-300 group-data-[state=open]:opacity-0 group-data-[state=open]:rotate-90 absolute"
+                    />
+                    <Minus
+                      size={16}
+                      className="text-text-primary transition-all duration-300 group-data-[state=closed]:opacity-0 group-data-[state=closed]:-rotate-90"
+                    />
+                  </div>
+                </Accordion.Trigger>
+              </Accordion.Header>
+              <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
+                <div className="pb-5 pl-5 pr-12">
+                  <p className="text-text-tertiary leading-5 text-sm">
+                    {faq.answer}
+                  </p>
+                </div>
+              </Accordion.Content>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      </div>
+    </div>
   );
 }
