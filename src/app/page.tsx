@@ -5,6 +5,7 @@ import OurWork from "./components/our-work";
 import Testimonials from "./components/testimonials";
 import Pricing from "./components/pricing";
 import FAQ from "./components/faq";
+import Footer from "./components/footer";
 import LShapeReverse from "./components/LShapeReverse";
 import LShape from "./components/LShape";
 import { ArrowUpRight } from "lucide-react";
@@ -177,6 +178,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
