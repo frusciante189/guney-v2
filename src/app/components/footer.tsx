@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="flex flex-col gap-5 w-full">
               <div className="h-[156px] flex items-center justify-center pointer-events-none select-none">
                 <h1
-                  className="text-[16rem] font-bold text-white/80 opacity-20 text-center"
+                  className="lg:text-[16rem] md:text-[12rem] sm:text-9xl text-8xl font-bold text-white/80 opacity-20 text-center"
                   style={{
                     maskImage:
                       "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 85%)",
@@ -71,8 +71,8 @@ export default function Footer() {
                   Gune<span className="text-brand-coral">y</span>
                 </h1>
               </div>
-              <div className="grid grid-cols-6 gap-20 mt-5">
-                <div className="col-span-2 flex flex-col gap-2.5">
+              <div className="grid lg:grid-cols-6 grid-cols-4 lg:gap-20 gap-12 mt-5">
+                <div className="lg:col-span-2 col-span-4 flex flex-col gap-2.5">
                   <div className="flex items-center gap-1">
                     <div className="size-[30px] rounded-full bg-white flex items-center justify-center">
                       <Asterisk size={24} color="black" />
@@ -141,7 +141,7 @@ export default function Footer() {
                     </Link>
                   </div>
                 </div>
-                <div className="col-span-2 flex flex-col gap-2.5">
+                <div className="lg:col-span-2 col-span-4 flex flex-col gap-2.5 lg:max-w-max max-w-[450px]">
                   <p>Newsletter</p>
                   <div className="flex flex-col gap-6">
                     <p className="text-white/60 text-sm max-w-[260px]">
