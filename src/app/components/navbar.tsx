@@ -9,14 +9,17 @@ import { motion, AnimatePresence } from "motion/react";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false); // Close mobile menu on click
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -32,55 +35,55 @@ const Navbar = () => {
       >
         <Link
           href="#home"
-          onClick={(e) => handleSmoothScroll(e, 'home')}
+          onClick={(e) => handleSmoothScroll(e, "home")}
           className="flex items-center gap-1 hover:opacity-80 transition-opacity"
         >
           <div className="size-[30px] rounded-full bg-white flex items-center justify-center">
             <Asterisk size={24} color="black" />
           </div>
-          <p className="text-lg font-bold">
+          <p className="text-lg font-bold text-white">
             Gune<span className="text-brand-coral">y</span>
           </p>
         </Link>
         <div className="flex items-center">
           <Link
             href="#services"
-            onClick={(e) => handleSmoothScroll(e, 'services')}
+            onClick={(e) => handleSmoothScroll(e, "services")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             Services
           </Link>
           <Link
             href="#work"
-            onClick={(e) => handleSmoothScroll(e, 'work')}
+            onClick={(e) => handleSmoothScroll(e, "work")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             Work
           </Link>
           <Link
             href="#process"
-            onClick={(e) => handleSmoothScroll(e, 'process')}
+            onClick={(e) => handleSmoothScroll(e, "process")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             Process
           </Link>
           <Link
             href="#pricing"
-            onClick={(e) => handleSmoothScroll(e, 'pricing')}
+            onClick={(e) => handleSmoothScroll(e, "pricing")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             Pricing
           </Link>
           <Link
             href="#faq"
-            onClick={(e) => handleSmoothScroll(e, 'faq')}
+            onClick={(e) => handleSmoothScroll(e, "faq")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             FAQ
           </Link>
           <Link
             href="#blog"
-            onClick={(e) => handleSmoothScroll(e, 'blog')}
+            onClick={(e) => handleSmoothScroll(e, "blog")}
             className="text-white/80 text-sm font-medium p-2 hover:text-white transition-colors"
           >
             Blog
@@ -98,13 +101,13 @@ const Navbar = () => {
       >
         <Link
           href="#home"
-          onClick={(e) => handleSmoothScroll(e, 'home')}
+          onClick={(e) => handleSmoothScroll(e, "home")}
           className="flex items-center gap-1"
         >
           <div className="size-[30px] rounded-full bg-white flex items-center justify-center">
             <Asterisk size={24} color="black" />
           </div>
-          <p className="text-lg font-bold">
+          <p className="text-lg font-bold text-white">
             Gune<span className="text-brand-coral">y</span>
           </p>
         </Link>
@@ -131,42 +134,42 @@ const Navbar = () => {
             <div className="flex flex-col gap-2">
               <Link
                 href="#services"
-                onClick={(e) => handleSmoothScroll(e, 'services')}
+                onClick={(e) => handleSmoothScroll(e, "services")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 Services
               </Link>
               <Link
                 href="#work"
-                onClick={(e) => handleSmoothScroll(e, 'work')}
+                onClick={(e) => handleSmoothScroll(e, "work")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 Work
               </Link>
               <Link
                 href="#process"
-                onClick={(e) => handleSmoothScroll(e, 'process')}
+                onClick={(e) => handleSmoothScroll(e, "process")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 Process
               </Link>
               <Link
                 href="#pricing"
-                onClick={(e) => handleSmoothScroll(e, 'pricing')}
+                onClick={(e) => handleSmoothScroll(e, "pricing")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 Pricing
               </Link>
               <Link
                 href="#faq"
-                onClick={(e) => handleSmoothScroll(e, 'faq')}
+                onClick={(e) => handleSmoothScroll(e, "faq")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 FAQ
               </Link>
               <Link
                 href="#blog"
-                onClick={(e) => handleSmoothScroll(e, 'blog')}
+                onClick={(e) => handleSmoothScroll(e, "blog")}
                 className="text-white/80 text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl transition-colors"
               >
                 Blog

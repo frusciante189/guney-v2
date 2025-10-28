@@ -49,8 +49,8 @@ export default function Footer() {
                 European markets?
               </h2>
               <p className="text-white/60 max-w-content-max-width-xs mx-auto text-center">
-                Let&apos;s discuss your expansion goals and create a clear roadmap
-                for entering Europe.
+                Let&apos;s discuss your expansion goals and create a clear
+                roadmap for entering Europe.
               </p>
               <BookCallButton />
               <div className="flex items-center gap-3">
@@ -77,7 +77,7 @@ export default function Footer() {
                     <div className="size-[30px] rounded-full bg-white flex items-center justify-center">
                       <Asterisk size={24} color="black" />
                     </div>
-                    <p className="text-lg font-bold">
+                    <p className="text-lg font-bold text-white">
                       Gune<span className="text-brand-coral">y</span>
                     </p>
                   </div>
