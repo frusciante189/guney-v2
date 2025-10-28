@@ -15,10 +15,40 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    id: "nova-threads",
-    title: "Nova Threads",
-    image: "/w1.avif",
-    tags: ["Crypto", "Web app"],
+    id: "hannover-messe-2024",
+    title: "Hannover Messe 2024",
+    image: "/our-work/1.jpg",
+    tags: ["Germany", "Industrial Tech"],
+  },
+  {
+    id: "k-messe-dusseldorf-2023",
+    title: "K Messe Düsseldorf 2023",
+    image: "/our-work/2.jpg",
+    tags: ["Germany", "Plastics & Rubber"],
+  },
+  {
+    id: "bauma-munich-2024",
+    title: "Bauma Munich 2024",
+    image: "/our-work/3.jpg",
+    tags: ["Germany", "Construction"],
+  },
+  {
+    id: "metav-dusseldorf-2024",
+    title: "METAV Düsseldorf 2024",
+    image: "/our-work/4.jpg",
+    tags: ["Germany", "Metalworking"],
+  },
+  {
+    id: "iaa-frankfurt-2023",
+    title: "IAA Frankfurt 2023",
+    image: "/our-work/5.jpg",
+    tags: ["Germany", "Automotive"],
+  },
+  {
+    id: "ism-cologne-2024",
+    title: "ISM Cologne 2024",
+    image: "/our-work/6.jpg",
+    tags: ["Germany", "Sweets & Snacks"],
   },
 ];
 

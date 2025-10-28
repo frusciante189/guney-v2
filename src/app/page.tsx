@@ -8,20 +8,38 @@ import FAQ from "./components/faq";
 import Footer from "./components/footer";
 import BlogSection from "./components/blog-section";
 import ProcessSection from "./components/process-section";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <Hero />
+      <Navbar />
+      <section id="home">
+        <Hero />
+      </section>
       <ImpactSection />
-      <OurServices />
-      <OurWork />
+      <section id="services">
+        <OurServices />
+      </section>
+      <section id="work">
+        <OurWork />
+      </section>
       <Testimonials />
-      <ProcessSection />
-      <Pricing />
-      <FAQ />
-      <BlogSection />
-      <Footer />
+      <section id="process">
+        <ProcessSection />
+      </section>
+      <section id="pricing">
+        <Pricing />
+      </section>
+      <section id="faq">
+        <FAQ />
+      </section>
+      <section id="blog">
+        <BlogSection />
+      </section>
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   );
 }
