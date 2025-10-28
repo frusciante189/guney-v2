@@ -48,7 +48,7 @@ export default function Pricing() {
                 <span className="text-white/60">expand with confidence.</span>
               </h2>
               <p className="text-white/60 max-w-content-max-width-xs mx-auto text-center">
-                One clear price to get started. We'll assess your situation and create a roadmap for European expansion.
+                One clear price to get started. We&apos;ll assess your situation and create a roadmap for European expansion.
               </p>
             </motion.div>
 

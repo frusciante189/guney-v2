@@ -3,10 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 interface ActionButtonProps {
   text: string;
   onClick?: () => void;
-  variant?: "default" | "dark";
 }
 
-export function ActionButton({ text, onClick, variant = "default" }: ActionButtonProps) {
+export function ActionButton({ text, onClick }: ActionButtonProps) {
   return (
     <button
       onClick={onClick}

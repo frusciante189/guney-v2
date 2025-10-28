@@ -49,7 +49,7 @@ export default function Footer() {
                 European markets?
               </h2>
               <p className="text-white/60 max-w-content-max-width-xs mx-auto text-center">
-                Let's discuss your expansion goals and create a clear roadmap
+                Let&apos;s discuss your expansion goals and create a clear roadmap
                 for entering Europe.
               </p>
               <BookCallButton />
