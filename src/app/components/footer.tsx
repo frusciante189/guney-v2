@@ -1,8 +1,8 @@
 "use client";
 
-import { ArrowRight, Asterisk, AtSign } from "lucide-react";
-import { SectionBadge } from "./ui/section-badge";
-import { BookCallButton } from "./ui/book-call-button";
+import { ArrowRight, Asterisk, AtSign, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/atoms";
+import { Badge } from "@/components/atoms";
 import { FooterLink } from "./ui/footer-link";
 import { motion } from "motion/react";
 
@@ -42,7 +42,7 @@ export default function Footer() {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <SectionBadge variant="dark">Book a call</SectionBadge>
+              <Badge variant="dark">Book a call</Badge>
               <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-white max-w-content-max-width-md mx-auto">
                 Ready to enter
                 <br className="xl:block hidden" />
@@ -52,7 +52,9 @@ export default function Footer() {
                 Let&apos;s discuss your expansion goals and create a clear
                 roadmap for entering Europe.
               </p>
-              <BookCallButton />
+              <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+                <span className="px-2 py-1">Book a Call</span>
+              </Button>
               <div className="flex items-center gap-3">
                 <div
                   className="size-1.5 bg-status-success shadow-status-pulse rounded-full animate-pulse-strong"

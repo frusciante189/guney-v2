@@ -1,7 +1,7 @@
 "use client";
 
 import StatCard from "./stat-card";
-import { SectionBadge } from "./ui/section-badge";
+import { Badge } from "@/components/atoms";
 import { SectionContainer, SectionContent } from "./ui/section-container";
 import { motion } from "motion/react";
 
@@ -43,7 +43,7 @@ export default function ImpactSection() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <SectionBadge>Impact</SectionBadge>
+          <Badge>Impact</Badge>
           <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-text-primary max-w-content-max-width-md mx-auto">
             Making European expansion <br className="xl:block hidden" />
             <span className="text-text-muted">simple and secure</span>

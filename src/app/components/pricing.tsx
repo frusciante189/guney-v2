@@ -1,9 +1,10 @@
 "use client";
 
-import { SectionBadge } from "./ui/section-badge";
+import { Phone } from "lucide-react";
+import { Button } from "@/components/atoms";
+import { SectionHeader } from "@/components/molecules";
 import { SectionContainer, SectionContent } from "./ui/section-container";
 import { PricingFeatureItem } from "./ui/pricing-feature-item";
-import { PricingBookButton } from "./ui/pricing-book-button";
 import { motion } from "motion/react";
 
 interface PricingFeature {
@@ -35,21 +36,19 @@ export default function Pricing() {
     <SectionContainer variant="dark">
       <SectionContent className="items-center">
             <motion.div
-              className="flex flex-col items-center xl:gap-5 gap-4"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <SectionBadge variant="dark">Pricing</SectionBadge>
-              <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-white max-w-content-max-width-md mx-auto">
-                Start with a consultation,
-                <br className="xl:block hidden" />
-                <span className="text-white/60">expand with confidence.</span>
-              </h2>
-              <p className="text-white/60 max-w-content-max-width-xs mx-auto text-center">
-                One clear price to get started. We&apos;ll assess your situation and create a roadmap for European expansion.
-              </p>
+              <SectionHeader
+                badge="Pricing"
+                badgeVariant="dark"
+                title="Start with a consultation,"
+                titleAccent="expand with confidence."
+                description="One clear price to get started. We'll assess your situation and create a roadmap for European expansion."
+                alignment="center"
+              />
             </motion.div>
 
             <motion.div
@@ -74,7 +73,15 @@ export default function Pricing() {
                 ))}
               </div>
 
-              <PricingBookButton />
+              <Button
+                variant="primary"
+                icon={Phone}
+                iconPosition="left"
+                ariaLabel="Book a consultation call"
+                className="mt-6"
+              >
+                Book Now
+              </Button>
             </motion.div>
       </SectionContent>
     </SectionContainer>

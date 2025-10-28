@@ -1,8 +1,9 @@
 "use client";
 
-import { SectionBadge } from "./ui/section-badge";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/atoms";
+import { Badge } from "@/components/atoms";
 import { SectionContainer, SectionContent } from "./ui/section-container";
-import { ActionButton } from "./ui/action-button";
 import { ProjectCard } from "./ui/project-card";
 import { motion } from "motion/react";
 
@@ -63,7 +64,7 @@ export default function OurWork() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <SectionBadge>Success Stories</SectionBadge>
+          <Badge>Success Stories</Badge>
           <div className="flex md:items-end justify-between md:flex-row flex-col gap-5">
             <div className="flex flex-col gap-5">
               <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-text-primary max-w-content-max-width-lg">
@@ -73,7 +74,9 @@ export default function OurWork() {
                 From first contact to signed contracts — see how we help manufacturers expand into Europe.
               </p>
             </div>
-            <ActionButton text="View all case studies" />
+            <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+              <span className="px-2 py-1">View all case studies</span>
+            </Button>
           </div>
         </motion.div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-8">

@@ -2,7 +2,7 @@
 
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus, Minus } from "lucide-react";
-import { SectionBadge } from "./ui/section-badge";
+import { Badge } from "@/components/atoms";
 import { SectionContainer } from "./ui/section-container";
 import { FAQContactCard } from "./ui/faq-contact-card";
 import { motion } from "motion/react";
@@ -70,7 +70,7 @@ export default function FAQ() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="flex flex-col xl:gap-5 gap-4">
-            <SectionBadge>FAQ</SectionBadge>
+            <Badge>FAQ</Badge>
             <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-text-primary max-w-content-max-width-md">
               Common questions,
               <br className="xl:block hidden" />

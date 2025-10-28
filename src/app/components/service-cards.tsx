@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { FileText, Globe, Lock, Users, Shield, CheckSquare, LucideIcon } from "lucide-react";
+import { FileText, Globe, Lock, Users, Shield, CheckSquare, LucideIcon, ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/atoms";
 import { ServiceTag } from "./ui/service-tag";
 import { ChecklistItem } from "./ui/checklist-item";
-import { BookCallButton } from "./ui/book-call-button";
 import { motion } from "motion/react";
 
 interface ServiceTagData {
@@ -190,7 +190,11 @@ export default function ServiceCards() {
                   </h3>
                   <p className="text-sm text-text-tertiary">{service.description}</p>
                 </div>
-                {service.showButton && <BookCallButton />}
+                {service.showButton && (
+                  <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+                    <span className="px-2 py-1">Book a Call</span>
+                  </Button>
+                )}
               </div>
               <div className="flex flex-col w-[264px] border border-border-gray rounded-[18px] px-1.5 pt-1.5 pb-7 mask-fade-bottom">
                 {service.checklist?.map((item, index) => (
@@ -292,7 +296,11 @@ export default function ServiceCards() {
                   <br />
                   <span className="text-white/60">{service.description}</span>
                 </h3>
-                {service.showButton && <BookCallButton />}
+                {service.showButton && (
+                  <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+                    <span className="px-2 py-1">Book a Call</span>
+                  </Button>
+                )}
               </div>
             </motion.div>
           );

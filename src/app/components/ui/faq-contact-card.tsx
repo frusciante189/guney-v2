@@ -1,4 +1,5 @@
-import { BookCallButton } from "./book-call-button";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/atoms";
 
 interface FAQContactCardProps {
   title?: string;
@@ -19,7 +20,15 @@ export function FAQContactCard({
           {description}
         </p>
       </div>
-      <BookCallButton onClick={onBookCall} />
+      <Button
+        variant="secondary"
+        size="sm"
+        icon={ArrowUpRight}
+        onClick={onBookCall}
+        className="p-1.5 gap-2 max-w-max"
+      >
+        <span className="px-2 py-1">Book a Call</span>
+      </Button>
     </div>
   );
 }

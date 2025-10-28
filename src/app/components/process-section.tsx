@@ -1,4 +1,4 @@
-import { SectionBadge } from "./ui/section-badge";
+import { Badge } from "@/components/atoms";
 import { ProcessStepItem } from "./ui/process-step-item";
 
 interface ProcessStep {
@@ -51,7 +51,7 @@ export default function ProcessSection() {
     <div className="container-app md:px-8 px-5 xl:py-24 md:py-14 py-10 font-jakarta">
       <div className="xl:gap-16 lg:gap-14 gap-10 flex lg:flex-row flex-col">
         <div className="flex flex-col xl:gap-5 gap-4 xl:max-w-content-max-width-sm max-w-max flex-1">
-          <SectionBadge>How it works</SectionBadge>
+          <Badge>How it works</Badge>
           <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-text-primary max-w-content-max-width-lg">
             A clear path to
             <br />

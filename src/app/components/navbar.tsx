@@ -1,8 +1,8 @@
 "use client";
 
-import { Asterisk, Menu, X } from "lucide-react";
+import { Asterisk, Menu, X, ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
-import { BookCallButton } from "./ui/book-call-button";
+import { Button } from "@/components/atoms";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -89,7 +89,9 @@ const Navbar = () => {
             Blog
           </Link>
         </div>
-        <BookCallButton />
+        <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+          <span className="px-2 py-1">Book a Call</span>
+        </Button>
       </motion.nav>
 
       {/* Mobile Navbar */}
@@ -175,7 +177,9 @@ const Navbar = () => {
                 Blog
               </Link>
               <div className="pt-4 border-t border-white/10">
-                <BookCallButton />
+                <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
+                  <span className="px-2 py-1">Book a Call</span>
+                </Button>
               </div>
             </div>
           </motion.div>

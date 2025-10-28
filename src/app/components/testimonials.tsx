@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionBadge } from "./ui/section-badge";
+import { Badge } from "@/components/atoms";
 import { SectionContainer, SectionContent } from "./ui/section-container";
 import { TestimonialCard } from "./ui/testimonial-card";
 import { motion } from "motion/react";
@@ -91,7 +91,7 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <SectionBadge>Client Testimonials</SectionBadge>
+          <Badge>Client Testimonials</Badge>
           <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-text-primary max-w-content-max-width-md mx-auto">
             Trusted by Turkish manufacturers <br className="xl:block hidden" />
             <span className="text-text-muted">expanding into Europe</span>
