@@ -22,10 +22,12 @@ export interface ReviewerData {
   alt: string;
 }
 
+export type Rating = 1 | 2 | 3 | 4 | 5;
+
 export interface HeroSocialProofProps {
   reviewers?: ReviewerData[];
   totalReviewers?: string;
-  rating?: number;
+  rating?: Rating;
   reviewCount?: string;
 }
 

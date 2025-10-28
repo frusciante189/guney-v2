@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 interface StatCardProps {
   number: string;
   title: string;
@@ -9,11 +11,14 @@ export default function StatCard({
   number,
   title,
   description,
-  className = "",
+  className,
 }: StatCardProps) {
   return (
     <div
-      className={`bg-bg-gray-lighter rounded-4xl flex flex-col gap-5 p-10 ${className}`}
+      className={cn(
+        "bg-bg-gray-lighter rounded-4xl flex flex-col gap-5 p-10",
+        className
+      )}
     >
       <div className="flex flex-col gap-2">
         <div className="xl:text-5xl md:text-4xl text-3xl text-text-primary font-bold">

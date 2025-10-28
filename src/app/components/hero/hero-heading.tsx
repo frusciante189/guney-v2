@@ -10,7 +10,7 @@ export default function HeroHeading() {
           <span className="bg-bg-sky-light size-11 flex items-center justify-center rounded-xl rotate-[9deg]" aria-hidden="true">
             <Sparkles size={20} className="text-brand-sky fill-brand-sky" />
           </span>
-          <span className="bg-bg-coral-light size-11 flex items-center justify-center rounded-xl rotate-[-8deg] shadow-[0_0_0_3px_rgb(255_255_255/1)]" aria-hidden="true">
+          <span className="bg-bg-coral-light size-11 flex items-center justify-center rounded-xl rotate-[-8deg] shadow-avatar-ring" aria-hidden="true">
             <Zap size={20} className="text-brand-coral fill-brand-coral" />
           </span>
         </span>{" "}

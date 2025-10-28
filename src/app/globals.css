@@ -11,27 +11,190 @@
   --font-sans: var(--font-inter);
   --font-jakarta: var(--font-plus-jakarta-sans);
 
-  /* Brand Colors */
+  /* ============================================ */
+  /* BRAND COLORS */
+  /* ============================================ */
   --color-brand-coral: #ff5247;
   --color-brand-sky: #01aaff;
 
-  /* Background Colors */
+  /* ============================================ */
+  /* BACKGROUND COLORS */
+  /* ============================================ */
   --color-bg-sky-light: #e0f5ff;
   --color-bg-coral-light: #ffefee;
   --color-bg-gray-light: #f3f5f6;
   --color-bg-gray-lighter: #f9fafb;
   --color-bg-dark: #151619;
 
-  /* Border Colors */
+  /* Additional Background Colors (from hardcoded values) */
+  --color-bg-step-line: #ebedf0;
+  --color-bg-newsletter: #25272c;
+  --color-bg-separator-dot: #838b9e;
+
+  /* ============================================ */
+  /* BORDER COLORS */
+  /* ============================================ */
   --color-border-gray: #e5eaf0;
   --color-border-gray-dark: #e2e7ee;
+  --color-border-light: #eff3f7;
+  --color-border-process-step: #d9dfe8;
 
-  /* Text Colors */
+  /* ============================================ */
+  /* TEXT COLORS */
+  /* ============================================ */
   --color-text-primary: #0f1115;
   --color-text-secondary: #323745;
   --color-text-tertiary: #50576b;
   --color-text-muted: #697289;
+  --color-text-placeholder: #999999;
+  --color-text-quote: #9faac1;
 
+  /* ============================================ */
+  /* STATUS COLORS */
+  /* ============================================ */
+  --color-status-success: #22c55e;
+  --color-status-success-light: rgb(34 197 94 / 0.25);
+
+  /* ============================================ */
+  /* CONTAINER & LAYOUT */
+  /* ============================================ */
+  --container-max-width: 1200px;
+  --container-padding-xl: 2rem;
+  --container-padding-md: 1rem;
+  --container-padding-sm: 1.25rem;
+
+  /* Content Max Widths */
+  --content-max-width-xs: 350px;
+  --content-max-width-sm: 450px;
+  --content-max-width-md: 550px;
+  --content-max-width-lg: 700px;
+  --content-max-width-form: 260px;
+
+  /* ============================================ */
+  /* SPACING TOKENS */
+  /* ============================================ */
+
+  /* Section Spacing (Vertical) */
+  --spacing-section-y-xl: 6rem;     /* 96px - xl:py-24 */
+  --spacing-section-y-md: 3.5rem;   /* 56px - md:py-14 */
+  --spacing-section-y-sm: 2.5rem;   /* 40px - py-10 */
+
+  /* Section Spacing (Top - Hero specific) */
+  --spacing-section-top-hero-xl: 10rem;   /* 160px - xl:pt-40 */
+  --spacing-section-top-hero-sm: 7rem;    /* 112px - pt-28 */
+
+  /* Section Spacing (Bottom - Hero specific) */
+  --spacing-section-bottom-hero-xl: 5rem; /* 80px - xl:pb-20 */
+
+  /* Section Gap (Between elements) */
+  --spacing-section-gap-xl: 5rem;    /* 80px - xl:gap-20 */
+  --spacing-section-gap-lg: 4rem;    /* 64px - lg:gap-16 */
+  --spacing-section-gap-md: 3.5rem;  /* 56px - md:gap-14 */
+  --spacing-section-gap-sm: 2.5rem;  /* 40px - gap-10 */
+
+  /* Content Gap */
+  --spacing-content-gap-xl: 3.5rem;  /* 56px - xl:gap-14 */
+  --spacing-content-gap-md: 2.75rem; /* 44px - md:gap-11 */
+  --spacing-content-gap-sm: 2.5rem;  /* 40px - gap-10 */
+
+  /* Card Gap */
+  --spacing-card-gap-xl: 1.25rem;    /* 20px - xl:gap-5 */
+  --spacing-card-gap-sm: 1rem;       /* 16px - gap-4 */
+
+  /* ============================================ */
+  /* TYPOGRAPHY TOKENS */
+  /* ============================================ */
+
+  /* Hero Heading */
+  --font-size-hero-xl: 3rem;        /* 48px - xl:text-5xl */
+  --font-size-hero-md: 2.25rem;     /* 36px - md:text-4xl */
+  --font-size-hero-sm: 1.875rem;    /* 30px - text-3xl */
+  --line-height-hero-xl: 4.5rem;    /* 72px - xl:leading-[72px] */
+
+  /* Section Heading (h2) */
+  --font-size-heading-xl: 2.25rem;  /* 36px - xl:text-4xl */
+  --font-size-heading-md: 1.875rem; /* 30px - md:text-3xl */
+  --font-size-heading-sm: 1.5rem;   /* 24px - text-2xl */
+  --line-height-heading-xl: 3rem;   /* 48px - xl:leading-12 */
+  --line-height-heading-md: 2.5rem; /* 40px - md:leading-10 */
+  --line-height-heading-sm: 2rem;   /* 32px - leading-8 */
+
+  /* Subheading (h3, h6) */
+  --font-size-subheading-xl: 1.5rem;   /* 24px - xl:text-2xl */
+  --font-size-subheading-sm: 1.25rem;  /* 20px - text-xl */
+  --line-height-subheading-xl: 1.75rem; /* 28px - xl:leading-7 */
+  --line-height-subheading-sm: 1.25rem; /* 20px - leading-5 */
+
+  /* Body Text */
+  --font-size-body-lg: 1.125rem;    /* 18px - text-lg */
+  --font-size-body-base: 1rem;      /* 16px - text-base */
+  --font-size-body-sm: 0.875rem;    /* 14px - text-sm */
+  --font-size-body-xs: 0.75rem;     /* 12px - text-xs */
+  --line-height-body-sm: 1.25rem;   /* 20px - leading-5 */
+  --line-height-body-xs: 1rem;      /* 16px - leading-4 */
+
+  /* Metric Text (Large numbers in testimonials) */
+  --font-size-metric: 2.5rem;       /* 40px - text-[40px] */
+  --line-height-metric: 3rem;       /* 48px - leading-12 */
+
+  /* Display Text (Footer brand) */
+  --font-size-display-lg: 16rem;    /* 256px - lg:text-[16rem] */
+  --font-size-display-md: 12rem;    /* 192px - md:text-[12rem] */
+  --font-size-display-sm: 6rem;     /* 96px - text-9xl */
+
+  /* ============================================ */
+  /* BORDER RADIUS */
+  /* ============================================ */
+  --radius-section: 48px;
+  --radius-card: 32px;
+  --radius-3xl: 24px;
+  --radius-2xl: 16px;
+  --radius-xl: 12px;
+  --radius-lg: 8px;
+  --radius-md: 6px;
+  --radius-sm: 4px;
+  --radius-full: 9999px;
+
+  /* ============================================ */
+  /* SHADOWS */
+  /* ============================================ */
+
+  /* Card Shadows */
+  --shadow-card-elevated:
+    0 2px 6px -4px rgba(44, 45, 48, 0.08),
+    0 3.02329px 1.51164px -0.625px rgba(44, 45, 48, 0.02),
+    0 7.16573px 3.58286px -1.25px rgba(44, 45, 48, 0.02),
+    0 13.071px 6.53551px -1.875px rgba(44, 45, 48, 0.02),
+    0 21.7306px 10.8653px -2.5px rgba(44, 45, 48, 0.02),
+    0 35.0931px 17.5465px -3.125px rgba(44, 45, 48, 0.02),
+    0 57.4439px 28.7219px -3.75px rgba(44, 45, 48, 0.01),
+    0 98.9145px 49.4572px -4.375px rgba(44, 45, 48, 0.00),
+    0 180px 90px -5px rgba(44, 45, 48, 0);
+
+  --shadow-card-elevated-dark:
+    0 2px 6px -4px rgba(0, 0, 0, 0.08),
+    0 3.02329px 1.51164px -0.625px rgba(0, 0, 0, 0.02),
+    0 7.16573px 3.58286px -1.25px rgba(0, 0, 0, 0.02),
+    0 13.071px 6.53551px -1.875px rgba(0, 0, 0, 0.02),
+    0 21.7306px 10.8653px -2.5px rgba(0, 0, 0, 0.02),
+    0 35.0931px 17.5465px -3.125px rgba(0, 0, 0, 0.02),
+    0 57.4439px 28.7219px -3.75px rgba(0, 0, 0, 0.02),
+    0 98.9145px 49.4572px -4.375px rgba(0, 0, 0, 0.00),
+    0 180px 90px -5px rgba(0, 0, 0, 0);
+
+  /* Component Shadows */
+  --shadow-avatar-ring: 0 0 0 3px rgb(255 255 255 / 1);
+  --shadow-status-pulse: 0 0 0 2px var(--color-status-success-light);
+
+  /* ============================================ */
+  /* MASK GRADIENTS */
+  /* ============================================ */
+  --mask-fade-bottom: linear-gradient(180deg, #000 65%, transparent 100%);
+  --mask-fade-vertical: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 85%);
+
+  /* ============================================ */
+  /* ANIMATIONS */
+  /* ============================================ */
   --animate-pulse-strong: pulse-strong 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes pulse-strong {
@@ -78,4 +241,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
+}
+
+/* ============================================ */
+/* UTILITY CLASSES FOR DESIGN TOKENS */
+/* ============================================ */
+
+/* Container */
+@utility container-app {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mask Utilities */
+@utility mask-fade-bottom {
+  mask-image: var(--mask-fade-bottom);
+  -webkit-mask-image: var(--mask-fade-bottom);
+}
+
+@utility mask-fade-vertical {
+  mask-image: var(--mask-fade-vertical);
+  -webkit-mask-image: var(--mask-fade-vertical);
+}
+
+/* Shadow Utilities */
+@utility shadow-card-elevated {
+  box-shadow: var(--shadow-card-elevated);
+}
+
+@utility shadow-card-elevated-dark {
+  box-shadow: var(--shadow-card-elevated-dark);
+}
+
+@utility shadow-avatar-ring {
+  box-shadow: var(--shadow-avatar-ring);
+}
+
+@utility shadow-status-pulse {
+  box-shadow: var(--shadow-status-pulse);
 }
