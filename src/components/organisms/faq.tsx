@@ -3,8 +3,8 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus, Minus } from "lucide-react";
 import { Badge } from "@/components/atoms";
-import { SectionContainer } from "./ui/section-container";
-import { FAQContactCard } from "./ui/faq-contact-card";
+import { SectionContainer } from "@/components/organisms/section-container";
+import { FAQContactCard } from "@/components/organisms/faq-contact-card";
 import { motion } from "motion/react";
 
 interface FAQItem {

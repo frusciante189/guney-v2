@@ -1,8 +1,8 @@
 "use client";
 
 import { Badge } from "@/components/atoms";
-import { SectionContainer, SectionContent } from "./ui/section-container";
-import { BlogCard } from "./ui/blog-card";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
+import { BlogCard } from "@/components/organisms/blog-card";
 import { motion } from "motion/react";
 
 interface BlogPost {

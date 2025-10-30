@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { FileText, Globe, Lock, Users, Shield, CheckSquare, LucideIcon, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/atoms";
-import { ServiceTag } from "./ui/service-tag";
-import { ChecklistItem } from "./ui/checklist-item";
+import { Button, ChatAvatar, ChatBubble } from "@/components/atoms";
+import { ServiceTag } from "@/components/atoms/service-tag";
+import { ChecklistItem } from "@/components/molecules/checklist-item";
 import { motion } from "motion/react";
 
 interface ServiceTagData {
@@ -232,9 +232,7 @@ export default function ServiceCards() {
               </div>
               <div className="flex flex-col gap-3 border border-border-gray rounded-[18px] p-4 mask-fade-bottom">
                 <div className="flex items-center gap-2 pb-2 border-b border-border-gray">
-                  <div className="size-8 rounded-full bg-brand-coral flex items-center justify-center text-white text-xs font-bold">
-                    JD
-                  </div>
+                  <ChatAvatar initials="JD" />
                   <div className="flex-1">
                     <p className="text-xs font-medium text-text-primary">
                       {service.chat?.sender}
@@ -244,21 +242,15 @@ export default function ServiceCards() {
                   <span className="text-xs text-text-muted">{service.chat?.time}</span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="bg-bg-gray-lighter rounded-2xl rounded-tl-none p-3 max-w-[70%]">
-                    <p className="text-xs text-text-secondary">
-                      {service.chat?.message}
-                    </p>
-                  </div>
-                  <div className="bg-brand-coral/10 rounded-2xl rounded-tr-none p-3 ml-auto max-w-[70%]">
-                    <p className="text-xs text-text-secondary">
-                      Perfect! Can you send booth specs?
-                    </p>
-                  </div>
-                  <div className="bg-bg-gray-lighter rounded-2xl rounded-tl-none p-3 max-w-[70%]">
-                    <p className="text-xs text-text-secondary">
-                      Sending now. Also added parking passes.
-                    </p>
-                  </div>
+                  <ChatBubble side="left">
+                    {service.chat?.message}
+                  </ChatBubble>
+                  <ChatBubble side="right" variant="highlighted">
+                    Perfect! Can you send booth specs?
+                  </ChatBubble>
+                  <ChatBubble side="left">
+                    Sending now. Also added parking passes.
+                  </ChatBubble>
                 </div>
               </div>
             </motion.div>

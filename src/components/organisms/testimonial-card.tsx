@@ -1,5 +1,5 @@
-import { QuoteIcon } from "./icons/quote-icon";
-import { TestimonialAuthor } from "./testimonial-author";
+import { QuoteIcon } from "@/components/atoms/icons/quote-icon";
+import { TestimonialAuthor } from "@/components/molecules/testimonial-author";
 import { cn } from "@/lib/utils";
 
 interface TestimonialMetric {

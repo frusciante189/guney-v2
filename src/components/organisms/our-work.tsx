@@ -1,10 +1,9 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/atoms";
-import { Badge } from "@/components/atoms";
-import { SectionContainer, SectionContent } from "./ui/section-container";
-import { ProjectCard } from "./ui/project-card";
+import { Button, Badge } from "@/components/atoms";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
+import { ProjectCard } from "@/components/organisms/project-card";
 import { motion } from "motion/react";
 
 interface Project {

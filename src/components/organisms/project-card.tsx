@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { ProjectTag } from "./project-tag";
+import { ProjectTag } from "@/components/atoms/project-tag";
+import { IconButton } from "@/components/atoms";
 
 interface ProjectCardProps {
   title: string;
@@ -28,9 +29,7 @@ export function ProjectCard({ title, image, tags, onClick }: ProjectCardProps) {
           <h6 className="text-text-primary xl:text-xl text-lg font-medium flex-1">
             {title}
           </h6>
-          <div className="size-10 rounded-full bg-bg-gray-light flex items-center justify-center shrink-0">
-            <ArrowUpRight className="text-text-primary" size={16} />
-          </div>
+          <IconButton icon={ArrowUpRight} size="md" aria-label="View project" />
         </div>
         <div className="flex gap-3">
           {tags.map((tag, index) => (

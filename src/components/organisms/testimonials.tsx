@@ -1,8 +1,8 @@
 "use client";
 
 import { Badge } from "@/components/atoms";
-import { SectionContainer, SectionContent } from "./ui/section-container";
-import { TestimonialCard } from "./ui/testimonial-card";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
+import { TestimonialCard } from "@/components/organisms/testimonial-card";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -48,8 +48,8 @@ const TESTIMONIALS: Testimonial[] = [
       avatar: "/w1.avif",
     },
     metric: {
-      value: "3",
-      label: "Successful trade fair exhibitions",
+      value: "45+",
+      label: "Qualified leads generated",
     },
     layout: "medium",
     quoteSize: "small",

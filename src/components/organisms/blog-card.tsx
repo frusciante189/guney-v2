@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { BlogMetadata } from "./blog-metadata";
-import { BlogTag } from "./blog-tag";
+import { BlogMetadata } from "@/components/atoms/blog-metadata";
+import { BlogTag } from "@/components/atoms/blog-tag";
 import { cn } from "@/lib/utils";
 
 interface BlogCardProps {

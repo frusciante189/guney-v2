@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowRight, Asterisk, AtSign, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/atoms";
-import { Badge } from "@/components/atoms";
-import { FooterLink } from "./ui/footer-link";
+import { Asterisk, ArrowUpRight } from "lucide-react";
+import { Button, Badge, StatusIndicator } from "@/components/atoms";
+import { FooterLink } from "@/components/atoms/footer-link";
+import { EmailInput } from "@/components/molecules";
 import { motion } from "motion/react";
 
 interface FooterLinkItem {
@@ -56,11 +56,7 @@ export default function Footer() {
                 <span className="px-2 py-1">Book a Call</span>
               </Button>
               <div className="flex items-center gap-3">
-                <div
-                  className="size-1.5 bg-status-success shadow-status-pulse rounded-full animate-pulse-strong"
-                  role="status"
-                  aria-label="Available"
-                />
+                <StatusIndicator />
                 <span className="text-white/60 text-xs">
                   Slots are available during October
                 </span>
@@ -120,19 +116,7 @@ export default function Footer() {
                       Get insights on European market trends, trade fairs, and
                       expansion strategies.
                     </p>
-                    <div className="rounded-full p-2 flex items-center gap-2 border border-text-secondary bg-bg-newsletter transition-colors focus-within:border-brand-coral">
-                      <div className="flex items-center gap-2 flex-1 pl-3">
-                        <AtSign size={20} className="text-text-placeholder" />
-                        <input
-                          type="email"
-                          placeholder="Enter your email..."
-                          className="bg-transparent text-white text-sm outline-none flex-1 placeholder:text-text-placeholder caret-white"
-                        />
-                      </div>
-                      <button className="bg-brand-coral rounded-full px-[22px] py-3 flex items-center justify-center hover:bg-brand-coral/90 transition-colors">
-                        <ArrowRight className="text-white" size={20} />
-                      </button>
-                    </div>
+                    <EmailInput />
                   </div>
                 </div>
               </div>

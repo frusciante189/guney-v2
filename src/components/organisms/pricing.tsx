@@ -3,8 +3,8 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/atoms";
 import { SectionHeader } from "@/components/molecules";
-import { SectionContainer, SectionContent } from "./ui/section-container";
-import { PricingFeatureItem } from "./ui/pricing-feature-item";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
+import { PricingFeatureItem } from "@/components/molecules/pricing-feature-item";
 import { motion } from "motion/react";
 
 interface PricingFeature {

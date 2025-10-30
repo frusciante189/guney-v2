@@ -1,4 +1,4 @@
-import { ProcessStepNumber } from "./process-step-number";
+import { ProcessStepNumber } from "@/components/atoms/process-step-number";
 
 interface ProcessStepItemProps {
   number: string;

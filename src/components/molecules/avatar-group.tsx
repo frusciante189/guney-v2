@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AvatarBadge } from "@/components/atoms";
 
 interface AvatarItem {
   src: string;
@@ -33,11 +34,8 @@ export function AvatarGroup({
         />
       ))}
       {totalCount && (
-        <div
-          className="size-9 flex items-center justify-center font-medium text-text-primary outline outline-border-gray shadow-avatar-ring rounded-full bg-bg-gray-lighter text-xs"
-          aria-label={`More than ${totalCount} reviewers`}
-        >
-          {totalCount}
+        <div aria-label={`More than ${totalCount} reviewers`}>
+          <AvatarBadge count={totalCount} />
         </div>
       )}
     </div>

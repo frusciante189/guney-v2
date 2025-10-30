@@ -1,13 +1,13 @@
 "use client";
 
-import HeroBadge from "./hero/hero-badge";
-import HeroCTA from "./hero/hero-cta";
-import HeroHeading from "./hero/hero-heading";
-import HeroSocialProof from "./hero/hero-social-proof";
-import HeroTestimonialCard from "./hero/hero-testimonial-card-unified";
-import HeroTrustedCompanies from "./hero/hero-trusted-companies";
-import HeroVideo from "./hero/hero-video";
-import { SectionContainer } from "./ui/section-container";
+import HeroBadge from "@/components/organisms/hero/hero-badge";
+import HeroCTA from "@/components/organisms/hero/hero-cta";
+import HeroHeading from "@/components/organisms/hero/hero-heading";
+import HeroSocialProof from "@/components/organisms/hero/hero-social-proof";
+import HeroTestimonialCard from "@/components/organisms/hero/hero-testimonial-card-unified";
+import HeroTrustedCompanies from "@/components/organisms/hero/hero-trusted-companies";
+import HeroVideo from "@/components/organisms/hero/hero-video";
+import { SectionContainer } from "@/components/organisms/section-container";
 import { motion } from "motion/react";
 
 const Hero = () => {

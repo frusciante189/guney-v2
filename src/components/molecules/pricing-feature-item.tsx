@@ -1,4 +1,4 @@
-import { CheckmarkIcon } from "./icons/checkmark-icon";
+import { CheckmarkIcon } from "@/components/atoms/icons/checkmark-icon";
 
 interface PricingFeatureItemProps {
   text: string;

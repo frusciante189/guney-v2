@@ -2,7 +2,7 @@
 
 import StatCard from "./stat-card";
 import { Badge } from "@/components/atoms";
-import { SectionContainer, SectionContent } from "./ui/section-container";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
 import { motion } from "motion/react";
 
 interface Stat {

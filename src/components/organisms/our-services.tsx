@@ -1,7 +1,7 @@
 "use client";
 
 import ServiceCards from "./service-cards";
-import { SectionContainer, SectionContent } from "./ui/section-container";
+import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
 import { SectionHeader } from "@/components/molecules";
 import { motion } from "motion/react";
 

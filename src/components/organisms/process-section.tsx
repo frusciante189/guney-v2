@@ -1,5 +1,5 @@
 import { Badge } from "@/components/atoms";
-import { ProcessStepItem } from "./ui/process-step-item";
+import { ProcessStepItem } from "@/components/molecules/process-step-item";
 
 interface ProcessStep {
   id: string;

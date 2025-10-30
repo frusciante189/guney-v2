@@ -3,9 +3,9 @@
 import { ArrowUpRight } from "lucide-react";
 import { HeroBadgeProps } from "./types";
 import { HeroBadge as BadgeContainer } from "./hero-badge/index";
-import { StatusIndicator } from "./hero-badge/status-indicator";
+import { StatusIndicator, Divider } from "@/components/atoms";
 import { BadgeText } from "./hero-badge/badge-text";
-import { BadgeDivider } from "./hero-badge/badge-divider";
+
 import { BadgeButton } from "./hero-badge/badge-button";
 
 export default function HeroBadge({
@@ -17,7 +17,7 @@ export default function HeroBadge({
     <BadgeContainer>
       <StatusIndicator />
       <BadgeText>{availabilityText}</BadgeText>
-      <BadgeDivider />
+      <Divider variant="dark" hideOnMobile />
       <p className="text-text-primary text-xs sm:block hidden pl-3 pr-0.5">
         {eventText}
       </p>

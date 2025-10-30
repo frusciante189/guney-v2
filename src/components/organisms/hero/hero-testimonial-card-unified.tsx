@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { QuoteIcon } from "../ui/icons/quote-icon";
+import { QuoteIcon } from "@/components/atoms/icons/quote-icon";
 
 interface HeroTestimonialCardProps {
   position: "left" | "right";

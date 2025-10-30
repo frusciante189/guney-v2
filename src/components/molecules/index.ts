@@ -16,3 +16,7 @@ export type { NavLinkProps, NavLinkVariant } from "./NavLink";
 // Section Header
 export { SectionHeader } from "./SectionHeader";
 export type { SectionHeaderProps, SectionHeaderAlignment } from "./SectionHeader";
+
+// Email Input
+export { EmailInput } from "./EmailInput";
+export type { EmailInputProps } from "./EmailInput";

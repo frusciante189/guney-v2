@@ -1,4 +1,5 @@
 import { Sparkles, Zap } from "lucide-react";
+import { IconBadge } from "@/components/atoms";
 
 export default function HeroHeading() {
   return (
@@ -7,12 +8,8 @@ export default function HeroHeading() {
         Where Trade Meets <br className="md:block hidden" /> Opportunity{" "}
         <br className="sm:hidden block" />
         <span className="inline-flex -space-x-3 mr-1 sm:mt-0 mt-1.5">
-          <span className="bg-bg-sky-light size-11 flex items-center justify-center rounded-xl rotate-[9deg]" aria-hidden="true">
-            <Sparkles size={20} className="text-brand-sky fill-brand-sky" />
-          </span>
-          <span className="bg-bg-coral-light size-11 flex items-center justify-center rounded-xl rotate-[-8deg] shadow-avatar-ring" aria-hidden="true">
-            <Zap size={20} className="text-brand-coral fill-brand-coral" />
-          </span>
+          <IconBadge icon={Sparkles} color="sky" rotation={9} />
+          <IconBadge icon={Zap} color="coral" rotation={-8} showShadow />
         </span>{" "}
       </h1>
       <p className="max-w-[500px] mx-auto text-text-secondary text-center text-sm">
