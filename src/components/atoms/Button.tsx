@@ -6,8 +6,9 @@ import type { LucideIcon } from "lucide-react";
  * Button Variants:
  * - primary: Coral background, white text (main CTA)
  * - secondary: White background, gray text with border (secondary actions)
+ * - hero-cta: Dark background with icon badge (hero section CTA)
  */
-export type ButtonVariant = "primary" | "secondary";
+export type ButtonVariant = "primary" | "secondary" | "hero-cta";
 
 /**
  * Button Sizes:
@@ -107,6 +108,13 @@ export function Button({
       "border border-border-light",
       "hover:bg-bg-gray-light"
     ),
+    "hero-cta": cn(
+      "p-2.5 bg-bg-dark rounded-full",
+      "flex items-center gap-0",
+      "hover:bg-opacity-90 transition-all",
+      "disabled:opacity-50 disabled:cursor-not-allowed",
+      "group"
+    ),
   };
 
   // Size styles
@@ -122,6 +130,26 @@ export function Button({
     md: 20,
     lg: 24,
   };
+
+  // Special rendering for hero-cta variant
+  if (variant === "hero-cta") {
+    return (
+      <button
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+        aria-label={ariaLabel}
+        className={cn(variantStyles[variant], className)}
+      >
+        {Icon && (
+          <div className="size-7 bg-white/13 flex items-center justify-center rounded-full group-hover:bg-white/20 transition-all">
+            <Icon size={14} className="text-white" />
+          </div>
+        )}
+        <span className="text-white text-sm py-1 px-3">{children}</span>
+      </button>
+    );
+  }
 
   return (
     <button

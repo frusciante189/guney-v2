@@ -6,7 +6,7 @@ import { ProjectCard } from "@/components/organisms/project-card";
 import { FADE_IN_UP, getStaggerAnimation } from "@/constants/animations";
 import { PROJECTS } from "@/constants/content";
 
-export default function OurWork() {
+export const OurWork = () => {
   return (
     <SectionContainer id="work">
       <SectionContent>

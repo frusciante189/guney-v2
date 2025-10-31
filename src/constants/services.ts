@@ -11,6 +11,7 @@ export interface ServiceTagData {
 }
 
 export interface ChecklistItemData {
+  id: string;
   text: string;
   checked: boolean;
   highlighted?: boolean;
@@ -102,12 +103,12 @@ export const SERVICES: ServiceCardData[] = [
     gridClass: "lg:col-span-2",
     showButton: true,
     checklist: [
-      { text: "Letters of Credit", checked: true, highlighted: true },
-      { text: "Escrow Services", checked: true },
-      { text: "Payment Insurance", checked: true },
-      { text: "Bank Guarantees", checked: false },
-      { text: "Advance Payment Protection", checked: false },
-      { text: "Currency Risk Management", checked: false },
+      { id: "loc", text: "Letters of Credit", checked: true, highlighted: true },
+      { id: "escrow", text: "Escrow Services", checked: true },
+      { id: "payment-insurance", text: "Payment Insurance", checked: true },
+      { id: "bank-guarantees", text: "Bank Guarantees", checked: false },
+      { id: "advance-payment", text: "Advance Payment Protection", checked: false },
+      { id: "currency-risk", text: "Currency Risk Management", checked: false },
     ],
   },
   {

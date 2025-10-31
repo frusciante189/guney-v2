@@ -3,7 +3,7 @@ import { ProcessStepItem } from "@/components/molecules/process-step-item";
 import { SectionContainer } from "@/components/organisms/section-container";
 import { PROCESS_STEPS } from "@/constants/content";
 
-export default function ProcessSection() {
+export const ProcessSection = () => {
   return (
     <SectionContainer id="process">
       <div className="xl:gap-16 lg:gap-14 gap-10 flex lg:flex-row flex-col">

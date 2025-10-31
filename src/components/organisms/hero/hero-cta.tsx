@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import { Button } from "@/components/atoms";
 import { HeroCTAProps } from "./types";
 
 export default function HeroCTA({
@@ -7,19 +8,14 @@ export default function HeroCTA({
   isLoading = false,
 }: HeroCTAProps = {}) {
   return (
-    <button
+    <Button
+      variant="hero-cta"
+      icon={Phone}
       onClick={onBookCall}
       disabled={isLoading}
-      className="p-2.5 bg-bg-dark rounded-full flex items-center hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-      aria-label="Book a consultation call"
-      type="button"
+      ariaLabel="Book a consultation call"
     >
-      <div className="size-7 bg-white/13 flex items-center justify-center rounded-full" aria-hidden="true">
-        <Phone size={14} className="text-white" />
-      </div>
-      <div className="py-1 px-3">
-        <span className="text-white text-sm">{isLoading ? "Loading..." : text}</span>
-      </div>
-    </button>
+      {isLoading ? "Loading..." : text}
+    </Button>
   );
 }

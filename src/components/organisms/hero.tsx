@@ -15,7 +15,7 @@ import {
   HERO_TRUSTED,
 } from "@/constants/animations";
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <SectionContainer id="home" className="xl:pt-spacing-section-top-hero-xl xl:pb-spacing-section-bottom-hero-xl pt-spacing-section-top-hero-sm md:pb-spacing-section-y-md pb-spacing-section-y-sm relative">
       {/* Testimonial Card Left - Positioned absolutely on the left */}
@@ -69,4 +69,3 @@ const Hero = () => {
   );
 };
 
-export default Hero;

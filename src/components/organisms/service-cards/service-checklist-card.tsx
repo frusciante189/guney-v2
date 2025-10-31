@@ -7,6 +7,7 @@ import { ChecklistItem } from "@/components/molecules/checklist-item";
 import { getStaggerAnimation } from "@/constants/animations";
 
 interface ChecklistItemData {
+  id: string;
   text: string;
   checked: boolean;
   highlighted?: boolean;
@@ -55,9 +56,9 @@ export function ServiceChecklistCard({
         )}
       </div>
       <div className="flex flex-col w-[264px] border border-border-gray rounded-[18px] px-1.5 pt-1.5 pb-7 mask-fade-bottom">
-        {checklist.map((item, itemIndex) => (
+        {checklist.map((item) => (
           <ChecklistItem
-            key={itemIndex}
+            key={item.id}
             text={item.text}
             checked={item.checked}
             highlighted={item.highlighted}

@@ -346,3 +346,33 @@ export const PRICING_FEATURES: PricingFeature[] = [
     text: "Personalized action plan included",
   },
 ];
+
+// ============================================================================
+// HERO DATA
+// ============================================================================
+
+export interface TrustedCompanyLogo {
+  id: string;
+  src: string;
+  alt: string;
+}
+
+export const HERO_TRUSTED_LOGOS: TrustedCompanyLogo[] = [
+  { id: "logo-1", src: "/logos/l1.svg", alt: "Siemens" },
+  { id: "logo-2", src: "/logos/l2.svg", alt: "Bosch" },
+  { id: "logo-3", src: "/logos/l3.svg", alt: "Mercedes-Benz" },
+  { id: "logo-4", src: "/logos/l4.svg", alt: "BMW" },
+  { id: "logo-5", src: "/logos/l5.svg", alt: "Volkswagen" },
+  { id: "logo-6", src: "/logos/l6.svg", alt: "BASF" },
+];
+
+export interface ReviewerAvatar {
+  src: string;
+  alt: string;
+}
+
+export const HERO_REVIEWERS: ReviewerAvatar[] = [
+  { src: "/p1.avif", alt: "Mehmet Yılmaz - Manufacturing Director" },
+  { src: "/p2.avif", alt: "Ayşe Demir - Export Manager" },
+  { src: "/p3.avif", alt: "Can Özdemir - CEO" },
+];

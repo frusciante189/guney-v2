@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { SECTION_SPACING, GAP_SPACING } from "@/constants/spacing";
 
 interface SectionContainerProps {
   children: React.ReactNode;
@@ -19,7 +20,8 @@ export function SectionContainer({
         <div className="bg-bg-dark rounded-section">
           <div
             className={cn(
-              "container-app md:px-8 px-5 xl:py-24 md:py-14 py-10 font-jakarta",
+              "container-app md:px-8 px-5 font-jakarta",
+              SECTION_SPACING.standard.full,
               className
             )}
           >
@@ -34,7 +36,8 @@ export function SectionContainer({
     <section
       id={id}
       className={cn(
-        "container-app md:px-8 px-5 xl:py-24 md:py-14 py-10 font-jakarta",
+        "container-app md:px-8 px-5 font-jakarta",
+        SECTION_SPACING.standard.full,
         className
       )}
     >
@@ -50,7 +53,7 @@ interface SectionContentProps {
 
 export function SectionContent({ children, className }: SectionContentProps) {
   return (
-    <div className={cn("xl:gap-16 md:gap-14 gap-10 flex flex-col", className)}>
+    <div className={cn(GAP_SPACING.medium.full, "flex flex-col", className)}>
       {children}
     </div>
   );

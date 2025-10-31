@@ -3,20 +3,12 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { HERO_TRUSTED_LOGOS } from "@/constants/content";
 import { HeroTrustedCompaniesProps } from "./types";
-
-const DEFAULT_LOGOS = [
-  { id: "logo-1", src: "/logos/l1.svg", alt: "Company logo 1" },
-  { id: "logo-2", src: "/logos/l2.svg", alt: "Company logo 2" },
-  { id: "logo-3", src: "/logos/l3.svg", alt: "Company logo 3" },
-  { id: "logo-4", src: "/logos/l4.svg", alt: "Company logo 4" },
-  { id: "logo-5", src: "/logos/l5.svg", alt: "Company logo 5" },
-  { id: "logo-6", src: "/logos/l6.svg", alt: "Company logo 6" },
-];
 
 export default function HeroTrustedCompanies({
   title = "TRUSTED BY TOP COMPANIES",
-  logos = DEFAULT_LOGOS,
+  logos = HERO_TRUSTED_LOGOS,
   animationDuration = 20,
 }: HeroTrustedCompaniesProps = {}) {
   const [isPaused, setIsPaused] = useState(false);

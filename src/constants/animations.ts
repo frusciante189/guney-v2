@@ -111,16 +111,17 @@ export function getStaggerAnimation(
  */
 export function getStaggerAnimationLarge(
   index: number,
-  baseDelay = 0
+  baseDelay: number = DELAY.none
 ): AnimationVariant {
   return {
-    initial: { opacity: 0, y: 30 },
+    initial: { opacity: 0, y: TRANSLATE_Y.small },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.3 },
+    viewport: { once: true, amount: VIEWPORT_AMOUNT.medium },
     transition: {
-      duration: 0.6,
-      delay: baseDelay + index * 0.15,
-      ease: EASE_CURVE },
+      duration: DURATION.normal,
+      delay: baseDelay + index * DELAY.medium,
+      ease: EASE_CURVE,
+    },
   };
 }
 
@@ -131,7 +132,7 @@ export function getStaggerAnimationLarge(
 export const NAVBAR_ENTER: AnimationVariant = {
   initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay: 0.8, ease: EASE_CURVE },
+  transition: { duration: DURATION.normal, delay: 0.8, ease: EASE_CURVE },
 };
 
 /**
@@ -139,20 +140,20 @@ export const NAVBAR_ENTER: AnimationVariant = {
  * Used for secondary content that should appear after primary content
  */
 export const FADE_IN_DELAYED: AnimationVariant = {
-  initial: { opacity: 0, y: 40 },
+  initial: { opacity: 0, y: TRANSLATE_Y.medium },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.3 },
-  transition: { duration: 0.8, delay: 0.2, ease: EASE_CURVE },
+  viewport: { once: true, amount: VIEWPORT_AMOUNT.medium },
+  transition: { duration: DURATION.slow, delay: DELAY.long, ease: EASE_CURVE },
 };
 
 /**
  * Quick fade in for testimonials grid
  */
 export const FADE_IN_TESTIMONIAL: AnimationVariant = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: TRANSLATE_Y.small },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.2 },
-  transition: { duration: 0.6, ease: EASE_CURVE },
+  viewport: { once: true, amount: VIEWPORT_AMOUNT.small },
+  transition: { duration: DURATION.normal, ease: EASE_CURVE },
 };
 
 /**
@@ -163,50 +164,59 @@ export const MOBILE_MENU_DROPDOWN = {
   initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
-  transition: { duration: 0.3 },
+  transition: { duration: DURATION.fast },
+} as const;
+
+/**
+ * X-axis translation distances (in pixels)
+ */
+export const TRANSLATE_X = {
+  small: 20,
+  medium: 40,
+  large: 60,
 } as const;
 
 /**
  * Hero testimonial card slide in from left
  */
 export const HERO_TESTIMONIAL_LEFT = {
-  initial: { opacity: 0, x: -40 },
+  initial: { opacity: 0, x: -TRANSLATE_X.medium },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, delay: 0.5, ease: EASE_CURVE },
+  transition: { duration: DURATION.slow, delay: 0.5, ease: EASE_CURVE },
 } as const;
 
 /**
  * Hero testimonial card slide in from right
  */
 export const HERO_TESTIMONIAL_RIGHT = {
-  initial: { opacity: 0, x: 40 },
+  initial: { opacity: 0, x: TRANSLATE_X.medium },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, delay: 0.6, ease: EASE_CURVE },
+  transition: { duration: DURATION.slow, delay: 0.6, ease: EASE_CURVE },
 } as const;
 
 /**
  * Hero main content fade in
  */
 export const HERO_CONTENT = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: TRANSLATE_Y.small },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.9, delay: 0.1, ease: EASE_CURVE },
+  transition: { duration: 0.9, delay: DELAY.short, ease: EASE_CURVE },
 } as const;
 
 /**
  * Hero video fade in
  */
 export const HERO_VIDEO = {
-  initial: { opacity: 0, y: 40 },
+  initial: { opacity: 0, y: TRANSLATE_Y.medium },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, delay: 0.4, ease: EASE_CURVE },
+  transition: { duration: DURATION.verySlow, delay: 0.4, ease: EASE_CURVE },
 } as const;
 
 /**
  * Hero trusted companies fade in
  */
 export const HERO_TRUSTED = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: TRANSLATE_Y.small },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.9, delay: 0.7, ease: EASE_CURVE },
 } as const;

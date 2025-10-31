@@ -6,45 +6,45 @@
  */
 
 // Button
-export { Button } from "./Button";
-export type { ButtonProps, ButtonVariant, ButtonSize, IconPosition } from "./Button";
+export { Button } from "./button";
+export type { ButtonProps, ButtonVariant, ButtonSize, IconPosition } from "./button";
 
 // Badge
-export { Badge } from "./Badge";
-export type { BadgeProps, BadgeVariant } from "./Badge";
+export { Badge } from "./badge";
+export type { BadgeProps, BadgeVariant } from "./badge";
 
 // Icons
-export { LShapeIcon } from "./LShapeIcon";
-export type { LShapeIconProps } from "./LShapeIcon";
+export { LShapeIcon } from "./l-shape-icon";
+export type { LShapeIconProps } from "./l-shape-icon";
 
 // Status Indicator
-export { StatusIndicator } from "./StatusIndicator";
-export type { StatusIndicatorProps } from "./StatusIndicator";
+export { StatusIndicator } from "./status-indicator";
+export type { StatusIndicatorProps } from "./status-indicator";
 
 // Divider
-export { Divider } from "./Divider";
-export type { DividerProps, DividerOrientation, DividerVariant } from "./Divider";
+export { Divider } from "./divider";
+export type { DividerProps, DividerOrientation, DividerVariant } from "./divider";
 
 // Icon Badge
-export { IconBadge } from "./IconBadge";
-export type { IconBadgeProps, IconBadgeColor } from "./IconBadge";
+export { IconBadge } from "./icon-badge";
+export type { IconBadgeProps, IconBadgeColor } from "./icon-badge";
 
 // Chat Avatar
-export { ChatAvatar } from "./ChatAvatar";
-export type { ChatAvatarProps, ChatAvatarVariant } from "./ChatAvatar";
+export { ChatAvatar } from "./chat-avatar";
+export type { ChatAvatarProps, ChatAvatarVariant } from "./chat-avatar";
 
 // Chat Bubble
-export { ChatBubble } from "./ChatBubble";
-export type { ChatBubbleProps, ChatBubbleSide, ChatBubbleVariant } from "./ChatBubble";
+export { ChatBubble } from "./chat-bubble";
+export type { ChatBubbleProps, ChatBubbleSide, ChatBubbleVariant } from "./chat-bubble";
 
 // Icon Button
-export { IconButton } from "./IconButton";
-export type { IconButtonProps, IconButtonSize, IconButtonVariant } from "./IconButton";
+export { IconButton } from "./icon-button";
+export type { IconButtonProps, IconButtonSize, IconButtonVariant } from "./icon-button";
 
 // Star Rating
-export { StarRating } from "./StarRating";
-export type { StarRatingProps } from "./StarRating";
+export { StarRating } from "./star-rating";
+export type { StarRatingProps } from "./star-rating";
 
 // Avatar Badge
-export { AvatarBadge } from "./AvatarBadge";
-export type { AvatarBadgeProps, AvatarBadgeSize } from "./AvatarBadge";
+export { AvatarBadge } from "./avatar-badge";
+export type { AvatarBadgeProps, AvatarBadgeSize } from "./avatar-badge";

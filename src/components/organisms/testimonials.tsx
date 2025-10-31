@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { FADE_IN_UP, getStaggerAnimation } from "@/constants/animations";
 import { TESTIMONIALS } from "@/constants/content";
 
-export default function Testimonials() {
+export const Testimonials = () => {
   return (
     <SectionContainer className="xl:pb-24 md:pb-14 pb-10">
       <SectionContent className="items-center">

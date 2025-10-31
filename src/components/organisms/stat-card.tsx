@@ -7,12 +7,12 @@ interface StatCardProps {
   className?: string;
 }
 
-export default function StatCard({
+export const StatCard = ({
   number,
   title,
   description,
   className,
-}: StatCardProps) {
+}: StatCardProps) => {
   return (
     <div
       className={cn(

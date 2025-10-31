@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import { FOOTER_COMPANY_LINKS, FOOTER_SOCIAL_LINKS, FOOTER_LEGAL_LINKS } from "@/constants/navigation";
 import { FADE_IN_UP } from "@/constants/animations";
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <SectionContainer id="contact" variant="dark" className="pb-10!">
           <div className="xl:gap-20 md:gap-16 gap-12 flex flex-col items-center">

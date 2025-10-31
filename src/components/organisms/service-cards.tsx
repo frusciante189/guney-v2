@@ -22,7 +22,7 @@ import { SERVICES } from "@/constants/services";
  * - ServiceChatCard: Chat conversation preview
  * - ServiceDarkCard: Dark-themed service card with pattern overlay
  */
-export default function ServiceCards() {
+export const ServiceCards = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-fr gap-4">
       {SERVICES.map((service, index) => {

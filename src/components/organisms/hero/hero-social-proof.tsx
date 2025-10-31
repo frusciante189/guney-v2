@@ -1,15 +1,10 @@
+import { HERO_REVIEWERS } from "@/constants/content";
 import { HeroSocialProofProps } from "./types";
 import { AvatarGroup } from "@/components/molecules/avatar-group";
 import { StarRating } from "@/components/atoms";
 
-const DEFAULT_REVIEWERS = [
-  { src: "/p1.avif", alt: "Reviewer 1" },
-  { src: "/p2.avif", alt: "Reviewer 2" },
-  { src: "/p3.avif", alt: "Reviewer 3" },
-];
-
 export default function HeroSocialProof({
-  reviewers = DEFAULT_REVIEWERS,
+  reviewers = HERO_REVIEWERS,
   totalReviewers = "+2K",
   rating = 5,
   reviewCount = "From 1.5K reviews",

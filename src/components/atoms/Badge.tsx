@@ -1,6 +1,6 @@
 import type React from "react";
 import { cn } from "@/lib/utils";
-import { LShapeIcon } from "./LShapeIcon";
+import { LShapeIcon } from "./l-shape-icon";
 
 export type BadgeVariant = "default" | "dark";
 

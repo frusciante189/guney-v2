@@ -1,4 +1,4 @@
-import ServiceCards from "./service-cards";
+import { ServiceCards } from "./service-cards";
 import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
 import { SectionHeader, AnimatedSection } from "@/components/molecules";
 import { FADE_IN_UP } from "@/constants/animations";
@@ -10,7 +10,7 @@ import { FADE_IN_UP } from "@/constants/animations";
  * Uses new Atomic Design structure with SectionHeader molecule.
  * Now a server component - animations handled by AnimatedSection.
  */
-export default function OurServices() {
+export const OurServices = () => {
   return (
     <SectionContainer id="services">
       <SectionContent>

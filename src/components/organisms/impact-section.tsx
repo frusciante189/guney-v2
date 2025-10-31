@@ -1,10 +1,10 @@
-import StatCard from "./stat-card";
+import { StatCard } from "./stat-card";
 import { SectionHeader, AnimatedSection } from "@/components/molecules";
 import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
 import { FADE_IN_UP, getStaggerAnimation } from "@/constants/animations";
 import { STATS } from "@/constants/content";
 
-export default function ImpactSection() {
+export const ImpactSection = () => {
   return (
     <SectionContainer id="about" className="xl:pb-24 md:pb-14 pb-10">
       <SectionContent className="items-center">

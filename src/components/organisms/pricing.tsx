@@ -5,7 +5,7 @@ import { PricingFeatureItem } from "@/components/molecules/pricing-feature-item"
 import { FADE_IN_UP, FADE_IN_DELAYED } from "@/constants/animations";
 import { PRICING_FEATURES } from "@/constants/content";
 
-export default function Pricing() {
+export const Pricing = () => {
   return (
     <SectionContainer id="pricing" variant="dark">
       <SectionContent className="items-center">

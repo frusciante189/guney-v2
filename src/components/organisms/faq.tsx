@@ -1,15 +1,15 @@
 "use client";
 
-import * as Accordion from "@radix-ui/react-accordion";
-import { Plus, Minus } from "lucide-react";
 import { SectionHeader } from "@/components/molecules";
 import { SectionContainer } from "@/components/organisms/section-container";
 import { FAQContactCard } from "@/components/organisms/faq-contact-card";
 import { motion } from "motion/react";
+import { Plus, Minus } from "lucide-react";
+import * as Accordion from "@radix-ui/react-accordion";
 import { FADE_IN_UP, FADE_IN_DELAYED } from "@/constants/animations";
 import { FAQ_ITEMS } from "@/constants/content";
 
-export default function FAQ() {
+export const FAQ = () => {
   return (
     <SectionContainer id="faq">
       <div className="xl:gap-16 md:gap-14 gap-20 flex justify-between lg:flex-row flex-col">

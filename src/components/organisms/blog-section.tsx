@@ -4,7 +4,7 @@ import { BlogCard } from "@/components/organisms/blog-card";
 import { FADE_IN_UP, FADE_IN_DELAYED } from "@/constants/animations";
 import { BLOG_POSTS } from "@/constants/content";
 
-export default function BlogSection() {
+export const BlogSection = () => {
   return (
     <SectionContainer id="blog">
       <SectionContent>
