@@ -1,46 +1,20 @@
 "use client";
 
-import { Asterisk, ArrowUpRight } from "lucide-react";
-import { Button, Badge, StatusIndicator } from "@/components/atoms";
+import { Badge, StatusIndicator } from "@/components/atoms";
 import { FooterLink } from "@/components/atoms/footer-link";
-import { EmailInput } from "@/components/molecules";
+import { EmailInput, Logo, BookCallButton } from "@/components/molecules";
+import { SectionContainer } from "@/components/organisms/section-container";
 import { motion } from "motion/react";
-
-interface FooterLinkItem {
-  href: string;
-  text: string;
-}
-
-const COMPANY_LINKS: FooterLinkItem[] = [
-  { href: "#", text: "About Us" },
-  { href: "#", text: "Pricing" },
-  { href: "#", text: "Contact Us" },
-  { href: "#", text: "Case Studies" },
-];
-
-const SOCIAL_LINKS: FooterLinkItem[] = [
-  { href: "#", text: "Facebook" },
-  { href: "#", text: "Instagram" },
-  { href: "#", text: "Linked in" },
-];
-
-const LEGAL_LINKS: FooterLinkItem[] = [
-  { href: "#", text: "Privacy Policy" },
-  { href: "#", text: "Terms of Service" },
-];
+import { FOOTER_COMPANY_LINKS, FOOTER_SOCIAL_LINKS, FOOTER_LEGAL_LINKS } from "@/constants/navigation";
+import { FADE_IN_UP } from "@/constants/animations";
 
 export default function Footer() {
   return (
-    <div className="px-8 ">
-      <div className="bg-bg-dark rounded-section">
-        <div className="container-app md:px-8 px-5 xl:pt-24 md:pt-14 pt-10 pb-10 font-jakarta">
+    <SectionContainer id="contact" variant="dark" className="pb-10!">
           <div className="xl:gap-20 md:gap-16 gap-12 flex flex-col items-center">
             <motion.div
               className="flex flex-col items-center xl:gap-5 gap-4"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              {...FADE_IN_UP}
             >
               <Badge variant="dark">Book a call</Badge>
               <h2 className="font-bold xl:text-4xl xl:leading-12 md:leading-10 leading-8 md:text-3xl text-2xl text-center text-white max-w-content-max-width-md mx-auto">
@@ -52,9 +26,7 @@ export default function Footer() {
                 Let&apos;s discuss your expansion goals and create a clear
                 roadmap for entering Europe.
               </p>
-              <Button variant="secondary" size="sm" icon={ArrowUpRight} className="p-1.5 gap-2 max-w-max">
-                <span className="px-2 py-1">Book a Call</span>
-              </Button>
+              <BookCallButton className="p-1.5 gap-2 max-w-max" />
               <div className="flex items-center gap-3">
                 <StatusIndicator />
                 <span className="text-white/60 text-xs">
@@ -64,21 +36,14 @@ export default function Footer() {
             </motion.div>
 
             <div className="flex flex-col gap-5 w-full">
-              <div className="h-[156px] flex items-center justify-center pointer-events-none select-none">
-                <h1 className="lg:text-[16rem] md:text-[12rem] sm:text-9xl text-8xl font-bold text-white/80 opacity-20 text-center mask-fade-vertical">
+              <div className="h-[156px] flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
+                <p className="lg:text-[16rem] md:text-[12rem] sm:text-9xl text-8xl font-bold text-white/80 opacity-20 text-center mask-fade-vertical">
                   Gune<span className="text-brand-coral">y</span>
-                </h1>
+                </p>
               </div>
               <div className="grid lg:grid-cols-6 grid-cols-4 lg:gap-20 gap-12 mt-5">
                 <div className="lg:col-span-2 col-span-4 flex flex-col gap-2.5">
-                  <div className="flex items-center gap-1">
-                    <div className="size-[30px] rounded-full bg-white flex items-center justify-center">
-                      <Asterisk size={24} color="black" />
-                    </div>
-                    <p className="text-lg font-bold text-white">
-                      Gune<span className="text-brand-coral">y</span>
-                    </p>
-                  </div>
+                  <Logo />
                   <p className="text-white/60 text-sm max-w-[250px]">
                     Helping Turkish manufacturers expand into European markets
                     with confidence.
@@ -87,7 +52,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-6">
                   <h3 className="text-sm font-medium text-white">Company</h3>
                   <div className="flex flex-col gap-4">
-                    {COMPANY_LINKS.map((link) => (
+                    {FOOTER_COMPANY_LINKS.map((link) => (
                       <FooterLink
                         key={link.text}
                         href={link.href}
@@ -99,7 +64,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-6">
                   <h3 className="text-sm font-medium text-white">Socials</h3>
                   <div className="flex flex-col gap-4">
-                    {SOCIAL_LINKS.map((link) => (
+                    {FOOTER_SOCIAL_LINKS.map((link) => (
                       <FooterLink
                         key={link.text}
                         href={link.href}
@@ -123,7 +88,7 @@ export default function Footer() {
               <div className="flex items-center justify-between">
                 <p className="text-white/60 text-xs">© 2025 Guney Cuceloglu</p>
                 <div className="flex items-center gap-6">
-                  {LEGAL_LINKS.map((link) => (
+                  {FOOTER_LEGAL_LINKS.map((link) => (
                     <FooterLink
                       key={link.text}
                       href={link.href}
@@ -135,8 +100,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+    </SectionContainer>
   );
 }

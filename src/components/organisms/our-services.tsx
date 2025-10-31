@@ -1,32 +1,26 @@
-"use client";
-
 import ServiceCards from "./service-cards";
 import { SectionContainer, SectionContent } from "@/components/organisms/section-container";
-import { SectionHeader } from "@/components/molecules";
-import { motion } from "motion/react";
+import { SectionHeader, AnimatedSection } from "@/components/molecules";
+import { FADE_IN_UP } from "@/constants/animations";
 
 /**
  * Our Services Section
  *
  * Displays the services section with header and service cards grid.
  * Uses new Atomic Design structure with SectionHeader molecule.
+ * Now a server component - animations handled by AnimatedSection.
  */
 export default function OurServices() {
   return (
-    <SectionContainer>
+    <SectionContainer id="services">
       <SectionContent>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <AnimatedSection animation={FADE_IN_UP}>
           <SectionHeader
             badge="Our Services"
             title="From ideas into high-impact solutions"
             titleAccent="That inspires and convert"
           />
-        </motion.div>
+        </AnimatedSection>
         <div className="bg-bg-gray-lighter rounded-section p-5">
           <ServiceCards />
         </div>

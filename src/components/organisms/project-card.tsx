@@ -2,13 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { ProjectTag } from "@/components/atoms/project-tag";
 import { IconButton } from "@/components/atoms";
-
-interface ProjectCardProps {
-  title: string;
-  image: string;
-  tags: string[];
-  onClick?: () => void;
-}
+import type { ProjectCardProps } from "@/types/cards";
 
 export function ProjectCard({ title, image, tags, onClick }: ProjectCardProps) {
   return (
@@ -32,8 +26,8 @@ export function ProjectCard({ title, image, tags, onClick }: ProjectCardProps) {
           <IconButton icon={ArrowUpRight} size="md" aria-label="View project" />
         </div>
         <div className="flex gap-3">
-          {tags.map((tag, index) => (
-            <ProjectTag key={index} text={tag} />
+          {tags.map((tag) => (
+            <ProjectTag key={tag} text={tag} />
           ))}
         </div>
       </div>

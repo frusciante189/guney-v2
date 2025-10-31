@@ -4,16 +4,18 @@ interface SectionContainerProps {
   children: React.ReactNode;
   variant?: "default" | "dark";
   className?: string;
+  id?: string;
 }
 
 export function SectionContainer({
   children,
   variant = "default",
   className,
+  id,
 }: SectionContainerProps) {
   if (variant === "dark") {
     return (
-      <div className="px-8">
+      <section id={id} className="px-8">
         <div className="bg-bg-dark rounded-section">
           <div
             className={cn(
@@ -24,19 +26,20 @@ export function SectionContainer({
             {children}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div
+    <section
+      id={id}
       className={cn(
         "container-app md:px-8 px-5 xl:py-24 md:py-14 py-10 font-jakarta",
         className
       )}
     >
       {children}
-    </div>
+    </section>
   );
 }
 

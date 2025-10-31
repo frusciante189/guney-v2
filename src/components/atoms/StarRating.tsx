@@ -25,7 +25,7 @@ export function StarRating({
     >
       {[...Array(rating)].map((_, index) => (
         <Star
-          key={index}
+          key={`star-${index}`}
           size={size}
           className={cn(
             "text-text-secondary fill-text-secondary",

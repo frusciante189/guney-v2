@@ -7,6 +7,8 @@ export interface EmailInputProps {
   onSubmit?: (email: string) => void;
   className?: string;
   buttonAriaLabel?: string;
+  inputLabel?: string;
+  inputId?: string;
 }
 
 export function EmailInput({
@@ -14,6 +16,8 @@ export function EmailInput({
   onSubmit,
   className,
   buttonAriaLabel = "Subscribe to newsletter",
+  inputLabel = "Email address for newsletter subscription",
+  inputId = "newsletter-email",
 }: EmailInputProps): React.JSX.Element {
   const [email, setEmail] = React.useState("");
 
@@ -27,6 +31,9 @@ export function EmailInput({
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor={inputId} className="sr-only">
+        {inputLabel}
+      </label>
       <div
         className={cn(
           "rounded-full p-2 flex items-center gap-2 border border-text-secondary bg-bg-newsletter transition-colors focus-within:border-brand-coral",
@@ -34,14 +41,16 @@ export function EmailInput({
         )}
       >
         <div className="flex items-center gap-2 flex-1 pl-3">
-          <AtSign size={20} className="text-text-placeholder" />
+          <AtSign size={20} className="text-text-placeholder" aria-hidden="true" />
           <input
+            id={inputId}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={placeholder}
             className="bg-transparent text-white text-sm outline-none flex-1 placeholder:text-text-placeholder caret-white"
             required
+            aria-label={inputLabel}
           />
         </div>
         <button

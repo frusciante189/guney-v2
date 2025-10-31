@@ -3,17 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { BlogMetadata } from "@/components/atoms/blog-metadata";
 import { BlogTag } from "@/components/atoms/blog-tag";
 import { cn } from "@/lib/utils";
-
-interface BlogCardProps {
-  image: string;
-  author: string;
-  readTime: string;
-  title: string;
-  tags: string[];
-  date: string;
-  featured?: boolean;
-  onClick?: () => void;
-}
+import type { BlogCardProps } from "@/types/cards";
 
 export function BlogCard({
   image,
@@ -54,8 +44,8 @@ export function BlogCard({
         </div>
         <div className="flex gap-3 items-center">
           <div className="flex items-center gap-2">
-            {tags.map((tag, index) => (
-              <BlogTag key={index} text={tag} />
+            {tags.map((tag) => (
+              <BlogTag key={tag} text={tag} />
             ))}
           </div>
           <p className="text-text-muted text-xs font-medium">{date}</p>

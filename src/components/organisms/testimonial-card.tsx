@@ -1,23 +1,7 @@
 import { QuoteIcon } from "@/components/atoms/icons/quote-icon";
 import { TestimonialAuthor } from "@/components/molecules/testimonial-author";
 import { cn } from "@/lib/utils";
-
-interface TestimonialMetric {
-  value: string;
-  label: string;
-}
-
-interface TestimonialCardProps {
-  quote: string;
-  author: {
-    name: string;
-    title: string;
-    avatar: string;
-  };
-  metric?: TestimonialMetric;
-  layout?: "large" | "medium" | "small";
-  quoteSize?: "default" | "small";
-}
+import type { TestimonialCardProps } from "@/types/cards";
 
 export function TestimonialCard({
   quote,

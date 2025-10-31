@@ -32,6 +32,7 @@ export interface HeroSocialProofProps {
 }
 
 export interface LogoData {
+  id?: string;
   src: string;
   alt: string;
 }

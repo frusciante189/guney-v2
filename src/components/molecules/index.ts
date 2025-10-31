@@ -20,3 +20,10 @@ export type { SectionHeaderProps, SectionHeaderAlignment } from "./SectionHeader
 // Email Input
 export { EmailInput } from "./EmailInput";
 export type { EmailInputProps } from "./EmailInput";
+
+// Animated Section
+export { AnimatedSection } from "./AnimatedSection";
+
+// Book Call Button
+export { BookCallButton } from "./BookCallButton";
+export type { BookCallButtonProps } from "./BookCallButton";

@@ -6,12 +6,12 @@ import { useState } from "react";
 import { HeroTrustedCompaniesProps } from "./types";
 
 const DEFAULT_LOGOS = [
-  { src: "/logos/l1.svg", alt: "Company logo 1" },
-  { src: "/logos/l2.svg", alt: "Company logo 2" },
-  { src: "/logos/l3.svg", alt: "Company logo 3" },
-  { src: "/logos/l4.svg", alt: "Company logo 4" },
-  { src: "/logos/l5.svg", alt: "Company logo 5" },
-  { src: "/logos/l6.svg", alt: "Company logo 6" },
+  { id: "logo-1", src: "/logos/l1.svg", alt: "Company logo 1" },
+  { id: "logo-2", src: "/logos/l2.svg", alt: "Company logo 2" },
+  { id: "logo-3", src: "/logos/l3.svg", alt: "Company logo 3" },
+  { id: "logo-4", src: "/logos/l4.svg", alt: "Company logo 4" },
+  { id: "logo-5", src: "/logos/l5.svg", alt: "Company logo 5" },
+  { id: "logo-6", src: "/logos/l6.svg", alt: "Company logo 6" },
 ];
 
 export default function HeroTrustedCompanies({
@@ -43,10 +43,10 @@ export default function HeroTrustedCompanies({
           }}
         >
           {[...Array(2)].map((_, arrayIndex) => (
-            <div key={arrayIndex} className="flex gap-8 items-center">
-              {logos.map((logo, index) => (
+            <div key={`logo-group-${arrayIndex}`} className="flex gap-8 items-center">
+              {logos.map((logo) => (
                 <Image
-                  key={`${arrayIndex}-${index}`}
+                  key={`${arrayIndex}-${logo.id || logo.src}`}
                   src={logo.src}
                   alt={logo.alt}
                   width={120}
